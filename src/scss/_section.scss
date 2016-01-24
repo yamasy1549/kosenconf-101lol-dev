@@ -1,0 +1,20 @@
+#about,
+#date,
+#timetable,
+#access,
+#contact {
+  margin: 100px auto;
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 { font-size: 1.5rem; }
+
+  .about {
+    &:before {
+      background-image: url('../image/circle-pink.png');
+      background-size: contain;
+    }
+  }
+}

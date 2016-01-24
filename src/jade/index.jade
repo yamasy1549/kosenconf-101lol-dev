@@ -1,9 +1,52 @@
-doctype html
-html
+doctype html5
+html(lang="ja")
   head
-    meta(charset='UTF-8')
-    link(rel='stylesheet', href='./styles/style.css')
-    title Hello, Jade!
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+
+    //- TODO: descriptionとかkeywordsはあとで考える
+    meta(name="description" content="")
+    meta(name="keywords" content="")
+
+    // TODO: ogpとかもあとで考える
+    meta(property="og:type" content="website")
+    meta(property="og:title" content="")
+    meta(property="og:description" content="")
+    meta(property="og:image" content="")
+    meta(property="og:url" content="")
+    meta(property="og:site_name" content="")
+    meta(property="og:locale" content="")
+    meta(property="fb:admins" content="")
+    meta(property="fb:app_id" content="")
+    meta(content="summary" name="")
+    meta(content="" name="")
+
+    link(rel="stylesheet" href="./styles/style.css")
+    title 高専カンファlol
+
   body
-    h1 Hello, Jade!
-    p これは Jade のチュートリアルです。
+    nav.global-nav
+      ul
+        li.nav-item: a.top(href=""): img.top-img(src="./image/simplelogo-lol.png" alt="高専カンファlol公式ロゴ")
+        li.nav-item: a.about(href="") ABOUT
+        li.nav-item: a.date(href="") DATE
+        li.nav-item: a.timetable(href="") TIMETABLE
+        li.nav-item: a.access(href="") ACCESS
+        li.nav-item: a.contact(href="") CONTACT
+
+    div.wrapper
+      h1: img#toplogo(src="./image/toplogo.png" alt="高専カンファlol")
+      p.lead
+        | 高専カンファレンスlolは
+        strong lol(lots of laugh)
+        | をテーマに、
+        br
+        | 好奇心をくすぐられるような面白い発表・展示を行います。（仮）
+
+      //- section#about
+        h2.about ABOUT
+        h3 「高専カンファレンス」って？
+        p
+          | 全国の高専生・卒業生が中心となり、お互いに自分の趣味や技術・経験、夢など好きなことを好きなカタチで発表しあう場所です。
+        p
+          | 101回目の開催となる本イベントは、2016年4月30日（土） 明石工業高等専門学校（兵庫県明石市）にて開催されます。ほげほげ〜〜〜〜

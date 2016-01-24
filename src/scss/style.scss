@@ -1,4 +1,21 @@
-html {
-  background-color: #fff;
-  color: #000;
+@charset "UTF-8";
+
+@import "sanitize";
+@import "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+html {
+  background-color: $white;
+  color: $black;
+  font-family: "Noto Sans CJK JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 62.5%;
+}
+
+@import "nav";
+@import "top";
+@import "section";
