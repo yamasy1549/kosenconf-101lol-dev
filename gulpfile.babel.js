@@ -6,6 +6,7 @@ import loadPlugins  from "gulp-load-plugins";
 import jade         from "gulp-jade";
 import sass         from "gulp-sass";
 import sassGlob     from "gulp-sass-glob";
+import autoprefixer from "gulp-autoprefixer";
 import browserSync  from "browser-sync";
 import path         from "path";
 
@@ -43,6 +44,7 @@ gulp.task("scss", () => {
     return gulp.src(path.join(SCSS_DIR, "**/*.{scss,css}"))
         .pipe(sassGlob())
         .pipe(sass(SASS_OPTIONS))
+        .pipe(autoprefixer())
         .pipe(gulp.dest(path.join(DEST_DIR, "styles")));
 });
 
