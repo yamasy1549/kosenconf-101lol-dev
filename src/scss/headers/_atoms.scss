@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $white;
+  color: $black;
+  font-family: $primary-font;
+  font-size: 62.5%;
+  line-height: 1;
+}
+
+h1 { @include h1; }
+h2 { @include h2; }
+h3 { @include h3; }
+h4 { @include h4; }
+h5 { @include h5; }
+h6 { @include h6; }
+
+p { @include p; }
+blockquote { @include blockquote; }
+a { @include a; }
+kbd { @include kbd; }
+hr { @include hr; }
+small { @include small; }
+address { @include address; }
+ul,
+ol {
+  @include list;
+}
+img { @include img; }
+
+label { @include label; }
+input { @include input; }
+button,
+.btn {
+  @include button;
+}
+.disabled { @include disabled; }
+
+table { @include table; }
+
+pre,
+code {
+  font-family: $code-font;
+}
+
+.circle-all { @include circle-all; }
+.circle-pink { @include circle-pink; }
+.circle-orange { @include circle-orange; }
+.circle-yellow { @include circle-yellow; }
+.circle-green { @include circle-green; }
+.circle-blue { @include circle-blue; }
+.hover-circle-all {
+  &:hover,
+  &:active {
+    @include circle-all;
+  }
+}
+.hover-circle-pink {
+  &:hover,
+  &:active {
+    @include circle-pink;
+  }
+}
+.hover-circle-orange {
+  &:hover,
+  &:active {
+    @include circle-orange;
+  }
+}
+.hover-circle-yellow {
+  &:hover,
+  &:active {
+    @include circle-yellow;
+  }
+}
+.hover-circle-green {
+  &:hover,
+  &:active {
+    @include circle-green;
+  }
+}
+.hover-circle-blue {
+  &:hover,
+  &:active {
+    @include circle-blue;
+  }
+}

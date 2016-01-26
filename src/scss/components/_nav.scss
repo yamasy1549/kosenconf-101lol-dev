@@ -1,0 +1,29 @@
+.global-nav {
+  box-shadow: $shadow;
+
+  ul {
+    display: flex;
+    align-items: baseline;
+    margin: 0 100px;
+
+    .nav-item {
+      flex: 1;
+      list-style: none;
+
+      a {
+        @include a($hover: $black);
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        line-height: 60px;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+      }
+
+      .top-img {
+        width: auto;
+        height: 60px;
+      }
+    }
+  }
+}

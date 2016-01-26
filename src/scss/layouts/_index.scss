@@ -1,0 +1,57 @@
+#about,
+#date,
+#timetable,
+#access,
+#contact {
+  margin: 100px auto;
+
+  > * {
+    padding-left: 60px;
+    letter-spacing: 0.5px;
+  }
+
+  > h2 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    background-size: 100px;
+    line-height: 100px;
+  }
+
+  h3 { margin-bottom: 20px; }
+}
+
+#date {
+  table {
+    width: 90%;
+    margin: auto 60px;
+  }
+}
+
+#timetable {
+}
+
+#access {
+  ul { margin-left: 20px; }
+
+  img {
+    width: 50%;
+    margin: 10px 0;
+  }
+
+  address {
+    margin-bottom: 10px;
+  }
+
+  .googlemap {
+    display: block;
+    margin: 10px 0 10px 60px;
+    padding: 0;
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+      pointer-events: none;
+    }
+  }
+}
