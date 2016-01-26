@@ -1,7 +1,9 @@
 .global-nav {
   box-shadow: $shadow;
 
-  ul {
+  .menu-btn { display: none; }
+
+  .menu {
     display: flex;
     align-items: baseline;
     margin: 0 100px;
@@ -32,14 +34,50 @@
 
 @media (max-width: 768px) {
   .global-nav {
-    ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $white;
+    opacity: 0.92;
+
+    .menu-btn {
+      position: absolute;
+      right: 20px;
+      display: block;
+      line-height: 60px;
+
+      a { text-decoration: none; }
+    }
+
+    .menu {
       margin: 0 10px;
+      display: block;
+      height: 60px;
     }
 
     .nav-item {
-      &:not(:first-child) {
-        display: none;
+      display: none;
+
+      &:first-child {
+        display: block;
+        left: calc(50% - 56px/2);
       }
+    }
+
+    .hover-circle-all { background: none; }
+    .hover-circle-pink { @include circle-pink; }
+    .hover-circle-orange { @include circle-orange; }
+    .hover-circle-yellow { @include circle-yellow; }
+    .hover-circle-green { @include circle-green; }
+    .hover-circle-blue { @include circle-blue; }
+
+    .hover-circle-pink,
+    .hover-circle-orange,
+    .hover-circle-yellow,
+    .hover-circle-green,
+    .hover-circle-blue {
+      background-position: 40px;
+      font-weight: bold;
     }
   }
 }
