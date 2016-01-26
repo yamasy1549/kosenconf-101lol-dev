@@ -9,6 +9,7 @@ import sassGlob     from "gulp-sass-glob";
 import autoprefixer from "gulp-autoprefixer";
 import imagemin     from "gulp-imagemin";
 import pngquant     from "imagemin-pngquant";
+import uglify       from "gulp-uglify";
 import browserSync  from "browser-sync";
 import path         from "path";
 
@@ -70,9 +71,16 @@ gulp.task("imagemin", () => {
         .pipe(gulp.dest(path.join(DEST_DIR, "images")));
 });
 
+gulp.task("jsmin", () => {
+    gulp.src(path.join(SCRIPTS_DIR, "**/*.js"))
+        .pipe(uglify({preserveComments: 'some'}))
+        .pipe(gulp.dest(path.join(DEST_DIR, "scripts")));
+});
+
 gulp.task("watch", () => {
     browserSync(BROWSER_SYNC_OPTIONS);
 
     gulp.watch([path.join(JADE_DIR, "**/*.jade")], ["jade", reload]);
     gulp.watch([path.join(SCSS_DIR, "**/*.{scss,css}")], ["scss", reload]);
+    gulp.watch([path.join(SCRIPTS_DIR, "**/*.js")], ["jsmin", reload]);
 });
