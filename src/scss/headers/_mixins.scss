@@ -117,7 +117,7 @@
   background-color: $bg;
   color: $color;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.2;
   font-weight: bold;
   padding: 1rem;
   border: 0;
@@ -143,6 +143,10 @@
     color: $white;
     background-color: $light-gray;
   }
+}
+
+@mixin expand {
+  width: 100%;
 }
 
 @mixin table {

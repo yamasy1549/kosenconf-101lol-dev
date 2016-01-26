@@ -6,9 +6,20 @@ $(document).ready(function() {
             var speed = 400;
             var href= $(this).attr("href");
             var target = $(href == "#" || href == "" ? 'html' : href);
-            var position = target.offset().top - 80;
+            var position = target.offset().top - 20;
             $('body,html').animate({scrollTop:position}, speed, 'swing');
-            $('.menu-btn').click();
+            $('.menu').animate({
+                height: '60px'
+            }, 500);
+            $('.nav-item').animate({
+                display: 'none'
+            },{
+                'duration': 500,
+                'complete': function() {
+                    $('.nav-item').css('display', 'none');
+                    $('.nav-item:first-child').css('display', 'block');
+                }
+            });
         });
     });
 
