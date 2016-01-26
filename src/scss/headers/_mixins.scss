@@ -82,6 +82,7 @@
 
 @mixin img {
   width: 100%;
+  display: block;
 }
 
 @mixin label {
@@ -147,6 +148,7 @@
   color: $black;
   border-collapse: collapse;
   border-spacing: 0;
+  line-height: 1.8;
   width: 100%;
 
   th,

@@ -27,7 +27,7 @@ html(lang="ja")
   body
     nav.global-nav
       ul
-        li.nav-item: a.hover-circle-all(href=""): img.top-img(src="./images/simplelogo-lol.png" alt="高専カンファlol公式ロゴ")
+        li.nav-item: a.hover-circle-all(href="./index.html"): img.top-img(src="./images/simplelogo-lol.png" alt="高専カンファlol公式ロゴ")
         li.nav-item: a.hover-circle-pink(href="") ABOUT
         li.nav-item: a.hover-circle-orange(href="") DATE
         li.nav-item: a.hover-circle-yellow(href="") TIMETABLE
@@ -35,13 +35,14 @@ html(lang="ja")
         li.nav-item: a.hover-circle-blue(href="") CONTACT
 
     div.wrapper
-      h1: img#toplogo(src="./images/toplogo.png" alt="高専カンファlol")
-      p.lead
-        | 高専カンファレンスlolは
-        strong lol(lots of laugh)
-        | をテーマに、
-        br
-        | 好奇心をくすぐられるような面白い発表・展示を行います。
+      #top
+        h1: img.toplogo(src="./images/toplogo.png" alt="高専カンファlol")
+        p.lead
+          | 高専カンファレンスlolは
+          strong lol(lots of laugh)
+          | をテーマに、
+          br
+          | 好奇心をくすぐられるような面白い発表・展示を行います。
 
       section#about
         h2.circle-pink ABOUT
@@ -66,7 +67,10 @@ html(lang="ja")
               | （兵庫県明石市）
           tr
             th 参加費用
-            td 本会: 未定　懇親会: 未定
+            td
+              | 本会：未定
+              br
+              | 懇親会：未定
           tr
             th 定員
             td 120人

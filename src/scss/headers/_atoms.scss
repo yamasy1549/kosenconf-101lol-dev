@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 
-html {
+:root {
   background-color: $white;
   color: $black;
   font-family: $primary-font;
-  font-size: 62.5%;
   line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 h1 { @include h1; }
