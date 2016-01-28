@@ -18,14 +18,14 @@
         text-decoration: none;
         display: block;
         text-align: center;
-        line-height: 60px;
+        line-height: $nav-height;
         letter-spacing: 2px;
         font-size: 0.9rem;
       }
 
       .top-img {
         width: auto;
-        height: 60px;
+        height: $nav-height;
         display: inline;
       }
     }
@@ -38,13 +38,13 @@
     top: 0;
     width: 100%;
     background-color: $white;
-    opacity: 0.92;
+    opacity: $semitransparent;
 
     .menu-btn {
       position: absolute;
       right: 20px;
       display: block;
-      line-height: 60px;
+      line-height: $nav-height;
 
       a { text-decoration: none; }
     }

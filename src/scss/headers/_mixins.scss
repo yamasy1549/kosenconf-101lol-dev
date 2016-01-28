@@ -31,7 +31,9 @@
 
 @mixin p {
   color: $black;
-  line-height: 1.8;
+  line-height: $text-line-height;
+  letter-spacing: $text-letter-spacing;
+  margin: 10px 0;
 }
 
 @mixin blockquote {
@@ -39,7 +41,8 @@
   font-style: italic;
   border-left: 4px solid $light-gray;
   padding-left: 20px;
-  line-height: 1.8;
+  line-height: $text-line-height;
+  letter-spacing: $text-letter-spacing;
 }
 
 @mixin a($color: $black, $hover: $lol-blue) {
@@ -69,16 +72,20 @@
 @mixin small {
   font-size: 12px;
   color: $black;
+  line-height: $text-line-height;
+  letter-spacing: $text-letter-spacing;
 }
 
 @mixin address {
   font-style: normal;
-  line-height: 2;
+  line-height: $text-line-height;
+  letter-spacing: $text-letter-spacing;
 }
 
 @mixin list {
   padding-left: 40px;
-  line-height: 1.8;
+  line-height: $text-line-height;
+  letter-spacing: $text-letter-spacing;
 }
 
 @mixin img {
@@ -89,7 +96,7 @@
 @mixin label {
   color: $black;
   font-size: 16px;
-  line-height: 1;
+  line-height: $text-line-height;
   font-weight: bold;
 }
 
@@ -97,7 +104,7 @@
   display: inline-block;
   background-color: $white;
   color: $gray;
-  line-height: 1.5;
+  line-height: $text-line-height;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border: 1px solid $gray;
@@ -153,7 +160,7 @@
   color: $black;
   border-collapse: collapse;
   border-spacing: 0;
-  line-height: 1.8;
+  line-height: $text-line-height;
   width: 100%;
 
   th,

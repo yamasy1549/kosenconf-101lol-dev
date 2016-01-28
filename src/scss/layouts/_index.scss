@@ -16,10 +16,7 @@
 section {
   margin: 100px auto;
 
-  > * {
-    padding-left: 60px;
-    letter-spacing: 0.5px;
-  }
+  > * { padding-left: 60px; }
 
   > h2 {
     font-size: 1.8rem;
@@ -54,10 +51,8 @@ section {
   @media (max-width: 768px) {
     margin: 50px auto;
 
-    > * {
-      padding-left: 0;
-      letter-spacing: 0;
-    }
+    > * { padding-left: 0; }
+
     > h2 {
       @media (max-width: 768px) {
         background-size: 60px;
@@ -80,7 +75,7 @@ section {
 
   .lead {
     text-align: center;
-    line-height: 2;
+    line-height: 2.5;
   }
 
   @media (max-width: 768px) {
