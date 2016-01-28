@@ -34,6 +34,10 @@
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
   margin: 10px 0;
+
+  @media (max-width: 768px) {
+    line-height: $text-line-height-sm;
+  }
 }
 
 @mixin blockquote {
@@ -43,6 +47,10 @@
   padding-left: 20px;
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
+
+  @media (max-width: 768px) {
+    line-height: $text-line-height-sm;
+  }
 }
 
 @mixin a($color: $black, $hover: $lol-blue) {
@@ -74,18 +82,30 @@
   color: $black;
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
+
+  @media (max-width: 768px) {
+    line-height: $text-line-height-sm;
+  }
 }
 
 @mixin address {
   font-style: normal;
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
+
+  @media (max-width: 768px) {
+    line-height: $text-line-height-sm;
+  }
 }
 
 @mixin list {
   padding-left: 40px;
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
+
+  @media (max-width: 768px) {
+    line-height: $text-line-height-sm;
+  }
 }
 
 @mixin img {
@@ -98,6 +118,10 @@
   font-size: 16px;
   line-height: $text-line-height;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    line-height: $text-line-height-sm;
+  }
 }
 
 @mixin input($outline: $black) {
@@ -108,6 +132,10 @@
   font-weight: bold;
   padding: 0.5rem 1rem;
   border: 1px solid $gray;
+
+  @media (max-width: 768px) {
+    line-height: $text-line-height-sm;
+  }
 
   &:placeholder-shown {
     color: $gray;
@@ -138,6 +166,10 @@
     color: $color;
     background-color: lighten($bg, 10%);
   }
+
+  @media (max-width: 768px) {
+    @include expand;
+  }
 }
 
 @mixin disabled {
@@ -163,6 +195,10 @@
   line-height: $text-line-height;
   width: 100%;
 
+  @media (max-width: 768px) {
+    line-height: $text-line-height-sm;
+  }
+
   th,
   td {
     text-align: left;
@@ -170,9 +206,7 @@
     padding: 0.8rem 2rem;
   }
 
-  th {
-    background-color: lighten($light-gray, 15%);
-  }
+  th { background-color: lighten($light-gray, 15%); }
 }
 
 @mixin circle-all {
