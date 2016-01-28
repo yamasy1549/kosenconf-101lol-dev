@@ -1,4 +1,19 @@
 .wrapper {
+  [class*="circle-"] {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    background-size: 100px;
+    line-height: 100px;
+    padding-left: 60px;
+
+    @media (max-width: 768px) {
+      background-size: 60px;
+      line-height: 60px;
+      padding-left: 40px;
+      letter-spacing: 1px;
+    }
+  }
+
   margin: 0 100px 100px 100px;
 
   @media (max-width: 768px) {
@@ -6,24 +21,10 @@
   }
 }
 
-#top,
-#about,
-#date,
-#timetable,
-#access,
-#contact,
-#sponsors,
-section {
+.section {
   margin: 100px auto;
 
   > * { padding-left: 60px; }
-
-  > h2 {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-    background-size: 100px;
-    line-height: 100px;
-  }
 
   h3 { margin-bottom: 20px; }
 
@@ -52,15 +53,6 @@ section {
     margin: 50px auto;
 
     > * { padding-left: 0; }
-
-    > h2 {
-      @media (max-width: 768px) {
-        background-size: 60px;
-        line-height: 60px;
-        padding-left: 40px;
-        letter-spacing: 1px;
-      }
-    }
   }
 }
 
