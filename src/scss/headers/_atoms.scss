@@ -25,7 +25,11 @@ h6 { @include h6; }
 p { @include p; }
 blockquote { @include blockquote; }
 a { @include a; }
-kbd { @include kbd; }
+strong { @include strong; }
+kbd,
+code {
+  @include kbd;
+}
 hr { @include hr; }
 small { @include small; }
 address { @include address; }

@@ -14,6 +14,8 @@ html(lang="ja")
       section
         h2 Headers
         h3.subheading Headings
+          - for (var i = 1; i <= 6; i += 1)
+            code h#{i}
         h1 Level1 heading
         h2 Level2 heading
         h3 Level3 heading
@@ -22,30 +24,44 @@ html(lang="ja")
         h6 Level6 heading
 
         h3.subheading Paragraph
+          code p
         p こころぴょんぴょん待ち？✧ヾ(❀╹◡╹)ﾉﾞ考えるふりして(*≧o≦)b❤もうちょっと♡近づいちゃえ！☆♡ヾ(*'∀`*)ﾉ♡簡単には教えない(／≧∇)／＼(∇≦＼)／♪♡こんなに好きなことは✧:.ﾟ٩(๑>◡<๑)۶:.｡♡内緒なの～！((ヾ(๑ゝω･)
 
         h3.subheading Blockquote
+          code blockquote
         blockquote こころぴょんぴょん待ち？✧ヾ(❀╹◡╹)ﾉﾞ考えるふりして(*≧o≦)b❤もうちょっと♡近づいちゃえ！☆♡ヾ(*'∀`*)ﾉ♡簡単には教えない(／≧∇)／＼(∇≦＼)／♪♡こんなに好きなことは✧:.ﾟ٩(๑>◡<๑)۶:.｡♡内緒なの～！((ヾ(๑ゝω･)
 
         h3.subheading Text link
+          code a
         a(href="http://kosenconf.jp/?101lol") 高専カンファレンスのWiki
 
         h3.subheading Strong
-        strong 開催場所は明石高専です
+          code strong
+        | 開催場所は
+        strong 明石高専
+        | です
 
         h3.subheading keyboard
+          code kbd
+          code code
         kbd Cmd
 
         h3.subheading Hr
+          code hr
         hr
 
         h3.subheading Small
+          code small
         small 注釈：「高専カンファ」は「高専カンファレンス」の略
 
         h3.subheading Address
+          code address
         address 明石工業高等専門学校 〒674-0084 兵庫県明石市魚住町西岡679-3
 
         h3.subheading List
+          code ul
+          code ol
+          code li
         ul
           li くだもの
             ul
@@ -57,68 +73,62 @@ html(lang="ja")
               li なすび
 
         h3.subheading Img
+          code img
         img(src="./images/access_t_local.jpg")
 
         h3.subheading Label
+          code label
         label(for="testinput") name:
 
         h3.subheading Input
+          code input
         input#testinput(placeholder="Your name")
 
         h3.subheading Buttons
+          code button
+          code .btn
+          code .disabled
         a.btn(href="http://kosenconf.jp/?101lol") Wikiへ
         a.btn.disabled(href="http://kosenconf.jp/?101lol") disabled
 
         h3.subheading Table
+          code table
+          code tr
+          code th
+          code td
         table
           thead
             tr
-              th Table Heading 1
-              th Table Heading 2
-              th Table Heading 3
-              th Table Heading 4
-              th Table Heading 5
+              - for (var i = 1; i <= 5; i += 1)
+                th Table Heading #{i}
           tfoot
             tr
-              th Table Footer 1
-              th Table Footer 2
-              th Table Footer 3
-              th Table Footer 4
-              th Table Footer 5
+              - for (var i = 1; i <= 5; i += 1)
+                th Table Footer #{i}
           tbody
-            tr
-              td Table Cell 1
-              td Table Cell 2
-              td Table Cell 3
-              td Table Cell 4
-              td Table Cell 5
-            tr
-              td Table Cell 1
-              td Table Cell 2
-              td Table Cell 3
-              td Table Cell 4
-              td Table Cell 5
-            tr
-              td Table Cell 1
-              td Table Cell 2
-              td Table Cell 3
-              td Table Cell 4
-              td Table Cell 5
-            tr
-              td Table Cell 1
-              td Table Cell 2
-              td Table Cell 3
-              td Table Cell 4
-              td Table Cell 5
+            - for (var j = 1; j <= 4; j += 1)
+              tr
+                - for (var i = 1; i <= 5; i += 1)
+                  td Table Cell #{i}
+
+        h3.subheading Circles
+          code .circle-pink
+          code .circle-orange
+          code .circle-yellow
+          code .circle-green
+          code .circle-blue
+        h2.circle-pink ABOUT
+        h2.circle-orange ABOUT
+        h2.circle-yellow ABOUT
+        h2.circle-green ABOUT
+        h2.circle-blue ABOUT
 
       section
         h2 Components
         h3.subheading Nav
-        nav.global-nav
-          ul
-            li.nav-item: a.hover-circle-all(href=""): img.top-img(src="./images/simplelogo-lol.png" alt="高専カンファlol公式ロゴ")
-            li.nav-item: a.hover-circle-pink(href="") HOGE
-            li.nav-item: a.hover-circle-orange(href="") HOGE
-            li.nav-item: a.hover-circle-yellow(href="") HOGE
-            li.nav-item: a.hover-circle-green(href="") HOGE
-            li.nav-item: a.hover-circle-blue(href="") HOGE
+          code include ./_global-nav
+        include ./_global-nav
+
+        h3.subheading Footer
+          code include ./_footer
+        include ./_footer

@@ -42,6 +42,7 @@
 
 @mixin blockquote {
   color: $gray;
+  font-size: 80%;
   font-style: italic;
   border-left: 4px solid $light-gray;
   padding-left: 20px;
@@ -64,11 +65,18 @@
   }
 }
 
+@mixin strong {
+  font-weight: bold;
+  margin: 0 0.1rem;
+}
+
 @mixin kbd {
-  background-color: $white;
+  background-color: lighten($light-gray, 15%);
   color: $lol-pink;
-  padding: 0.1rem 0.2rem;
+  padding: 0.1rem 0.4rem;
+  margin: 0 0.4rem;
   border-radius: 4px;
+  font-weight: normal;
 }
 
 @mixin hr {
