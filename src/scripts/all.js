@@ -31,11 +31,11 @@ $(document).ready(function() {
         if(open == true) {
             $('.menu').animate({
                 height: '60px'
-            }, 500);
+            }, 300);
             $('.nav-item').animate({
                 display: 'none'
             },{
-                'duration': 500,
+                'duration': 300,
                 'complete': function() {
                     $('.nav-item').css('display', 'none');
                     $('.nav-item:first-child').css('display', 'block');
@@ -45,7 +45,7 @@ $(document).ready(function() {
         } else {
             $('.menu').animate({
                 height: '370px'
-            }, 500);
+            }, 300);
             $('.nav-item').css('display', 'block');
             open = true;
         };
