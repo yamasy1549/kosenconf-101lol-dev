@@ -1,32 +1,32 @@
 @mixin h1 {
   font-size: 32px;
   color: $black;
-  margin: 24px 0 10px;
+  margin: 24px 0 14px;
 }
 @mixin h2 {
   font-size: 24px;
   color: $black;
-  margin: 24px 0 10px;
+  margin: 24px 0 14px;
 }
 @mixin h3 {
   font-size: 18px;
   color: $black;
-  margin: 24px 0 10px;
+  margin: 24px 0 14px;
 }
 @mixin h4 {
   font-size: 16px;
   color: $black;
-  margin: 24px 0 10px;
+  margin: 24px 0 14px;
 }
 @mixin h5 {
   font-size: 13px;
   color: $black;
-  margin: 24px 0 10px;
+  margin: 24px 0 14px;
 }
 @mixin h6 {
   font-size: 10px;
   color: $black;
-  margin: 24px 0 10px;
+  margin: 24px 0 14px;
 }
 
 @mixin p {
