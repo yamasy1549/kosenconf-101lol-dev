@@ -28,6 +28,12 @@
         height: $nav-height;
         display: inline;
       }
+
+      .hover-circle-pink.active { @include circle-pink; }
+      .hover-circle-orange.active { @include circle-orange; }
+      .hover-circle-yellow.active { @include circle-yellow; }
+      .hover-circle-green.active { @include circle-green; }
+      .hover-circle-blue.active { @include circle-blue; }
     }
   }
 }

@@ -23,6 +23,10 @@ $(document).ready(function() {
         });
     });
 
+    if(location.pathname != "/") {
+        $('.global-nav .nav-item a[href^="./' + location.pathname.split("/")[1] + '"]').addClass('active');
+    };
+
     $('.menu-btn').click(function() {
         if(open == true) {
             $('.menu').animate({
