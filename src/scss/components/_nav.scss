@@ -14,7 +14,7 @@
       list-style: none;
 
       a {
-        @include a($hover: $black);
+        @include a($color: $black);
         text-decoration: none;
         display: block;
         text-align: center;

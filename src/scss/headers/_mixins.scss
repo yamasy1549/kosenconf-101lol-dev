@@ -60,15 +60,10 @@
   }
 }
 
-@mixin a($color: $black, $hover: $lol-blue) {
+@mixin a($color: $lol-pink) {
   color: $color;
   text-decoration: underline;
   transition: $fade;
-
-  &:hover,
-  &:active {
-    color: $hover;
-  }
 }
 
 @mixin strong {
@@ -161,7 +156,7 @@
   }
 }
 
-@mixin button($bg: $lol-blue, $color: $white) {
+@mixin button($bg: $lol-pink, $color: $white) {
   display: inline-block;
   background-color: $bg;
   color: $color;

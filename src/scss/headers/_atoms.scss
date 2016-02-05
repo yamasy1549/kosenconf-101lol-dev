@@ -47,7 +47,6 @@ button,
 }
 .btn.presentation { @include button($bg: $lol-orange); }
 .btn.booth { @include button($bg: $lol-green); }
-.btn.party { @include button($bg: $lol-pink); }
 .btn.sponsor { @include button($bg: $lol-blue); }
 .disabled { @include disabled; }
 .expand { @include expand; }
