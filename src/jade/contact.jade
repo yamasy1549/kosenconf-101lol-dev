@@ -1,0 +1,55 @@
+mixin member(name, img, position, introduction)
+  .member
+    .icon
+      img(src="./images/members/#{img}" alt="@#{name}のアイコン")
+    .name
+      a(href="https://twitter.com/#{name}" title="twitter - #{name}") @#{name}
+    p.position
+      | #{position}
+    p.introduction
+      small #{introduction}
+
+
+doctype html5
+html(lang="ja")
+  head
+    include ./_head
+    title 高専カンファレンスlol - コンタクト
+
+  body
+    include ./_global-nav
+
+    div.wrapper
+      section.section#contact
+        h1 CONTACT
+
+        h2.circle-green 質問・連絡など
+        address
+          | 高専カンファレンスlol 代表メールアドレス
+          br
+          | kosenconf-lol[at]googlegroups.com ([at]を@に変更してください)
+        p: a.btn(href="http://goo.gl/forms/MloVkxCYRB" target="_blank") 質問・連絡フォームはこちら
+
+        h2.circle-green lol実行委員の紹介
+        .members
+          +member("_shuft", "_shuft.png", "実行委員長", "")
+          +member("raryosu", "raryosu.png", "副実行委員長 / 広報", "")
+          +member("denari01", "denari01.jpg", "会計 / スポンサー担当", "")
+          +member("Iruyan_Zak", "Iruyan_Zak.png", "ブース発表 / 会場設営", "TeX+レポート=マラソン開発(つら楽しい)")
+        .members
+          +member("zakuro9715", "zakuro9715.png", "配信 / プレゼン発表", "")
+          +member("yamasy1549", "yamasy1549.png", "見習いデザイナー / サイト", "うさぎを頭にのせてしあわせにくらす")
+          +member("mc475_46", "mc475_46.jpg", "配信", "電気系の情報系です")
+          +member("theoldmoon0602", "theoldmoon0602.jpg", "ブース発表", "高専カンファレンスびぎなーです")
+        .members
+          +member("ig98n", "ig98n.png", "プレゼン発表", "ほげほげほげおげほげほげほげおげほげおげほｈ")
+          +member("luna01926", "luna01926.jpg", "プレゼン発表", "羊担当です")
+          +member("spade", "spade.png", "受付", "")
+          +member("tatuu", "tatuu.jpg", "会場設営", "")
+        .members
+          +member("amiko_soccer", "ami.png", "", "")
+          +member("zoom4638", "zoom4638.jpg", "懇親会", "おんなのこになりたい")
+          +member("sinatikkkkku", "sinatikkkkku.jpg", "受付", "")
+
+    include ./_footer
+    include ./_scripts
