@@ -44,14 +44,20 @@ html(lang="ja")
           tr
             th 参加費用
             td
-              | 本会
               ul
-                li 学生（名刺あり）: 970円
-                li 学生（名刺なし）: 無料
-              ul
-                li 社会人（名刺あり）: 1,470円
-                li 社会人（名刺なし）: 500円
-              | 懇親会 : 300円
+                li 本会
+                ul
+                  li 学生（名刺あり）: 970円
+                  li 学生（名刺なし）: 無料
+                  li 社会人（名刺あり）: 1,470円
+                  li 社会人（名刺なし）: 500円
+                li 懇親会
+                ul
+                  li 一律 300円
+              small
+                | 名刺については
+                a(href="#calling-cards") 「名刺デザイン代行」をご参照
+                | ください。
           tr
             th 定員
             td 120人
@@ -82,8 +88,8 @@ html(lang="ja")
 
         h3 Q5. 参加登録のキャンセルは可能？
         p
-          a(href="https://kosenconf.doorkeeper.jp/events/37652" target="_blank") 申し込みページ
-          | より可能です。
+          a(href="https://kosenconf.doorkeeper.jp/events/37652" target="_blank") 申し込みページより可能です
+          | 。
           br
           | 参加できなくなった場合、前日までにキャンセルをお願いします。
 
@@ -95,21 +101,22 @@ html(lang="ja")
           | をご用意いたしました。
         p
           | 名刺をお持ちでない方、せっかくなら記念に名刺を作ってみたい方は、ぜひ名刺作成プランをご利用ください！
-          br
-          | (名刺の発注業者の関係で価格が変動する恐れがあります。予めご了承ください。)
-        small 名刺デザイン代行プランにお申し込みをされた方へは、後日Doorkeeperに登録されたメールアドレス経由で、以下の「内容」などをお聞きいたします。
+        p
+          small
+            | 名刺の発注業者の関係で価格が変動する恐れがあります。予めご了承ください。
+            br
+            |  名刺デザイン代行プランにお申し込みをされた方へは、後日Doorkeeperに登録されたメールアドレス経由で、以下の「内容」などをお聞きいたします。
         table
           tr
             th 費用
             td
-              ul
-                li 学生 : 970円
-                li 社会人 : 1,470円
+              | 学生 : 970円
+              br
+              | 社会人 : 1,470円
+              br
               small
                 |本会への参加費用込み。
-                | 「
-                a(href="#about") 参加費用
-                | 」を参照
+                a(href="#about") 「参加費用」を参照
           tr
             th 枚数
             td 100枚
@@ -132,14 +139,6 @@ html(lang="ja")
               small ※ は必須項目
         h3 名刺見本
         img(src="./images/calling-cards.png" alt="名刺見本")
-
-      section.section#contact
-        h2.circle-green CONTACT
-        address
-          | 高専カンファレンスlol 代表メールアドレス
-          br
-          | kosenconf-lol[at]googlegroups.com ([at]を@に変更してください)
-        p: a.btn(href="http://goo.gl/forms/MloVkxCYRB" target="_blank") 質問・連絡フォームはこちら
 
     include ./_footer
     include ./_scripts
