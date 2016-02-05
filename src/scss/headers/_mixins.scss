@@ -172,7 +172,7 @@
   &:hover,
   &:active {
     color: $color;
-    background-color: lighten($bg, 10%);
+    background-color: lighten($bg, 20%);
   }
 
   @media (max-width: 768px) {
