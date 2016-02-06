@@ -41,7 +41,7 @@
   letter-spacing: $text-letter-spacing;
   margin: 10px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     line-height: $text-line-height-sm;
   }
 }
@@ -55,7 +55,7 @@
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     line-height: $text-line-height-sm;
   }
 }
@@ -92,7 +92,7 @@
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     line-height: $text-line-height-sm;
   }
 }
@@ -102,7 +102,7 @@
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     line-height: $text-line-height-sm;
   }
 }
@@ -112,7 +112,7 @@
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     line-height: $text-line-height-sm;
   }
 }
@@ -128,7 +128,7 @@
   line-height: $text-line-height;
   font-weight: bold;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     line-height: $text-line-height-sm;
   }
 }
@@ -142,7 +142,7 @@
   padding: 0.5rem 1rem;
   border: 1px solid $gray;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     line-height: $text-line-height-sm;
   }
 
@@ -176,7 +176,7 @@
     background-color: lighten($bg, 20%);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     @include expand;
   }
 }
@@ -204,7 +204,7 @@
   line-height: $text-line-height;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     line-height: $text-line-height-sm;
   }
 
