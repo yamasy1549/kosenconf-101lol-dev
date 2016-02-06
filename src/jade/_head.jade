@@ -14,12 +14,15 @@ mixin head(title, type)
   meta(name="twitter:card" content="summary_large_image")
   meta(name="twitter:site" content="@kosenconf")
   meta(name="twitter:creator" content="@kosenconf")
+  meta(name="twitter:description" content="高専カンファレンスlolの公式サイトです。テーマは「lol(lots of laugh)」、好奇心をくすぐられるような面白い発表・展示を行います。")
   meta(name="twitter:image" content="https://raw.githubusercontent.com/yamasy1549/kosenconf-101lol/gh-pages/images/og-image.png")
 
   if title
     title #{title} | 高専カンファレンスlol
+    meta(name="twitter:title" content="#{title} | 高専カンファレンスlol")
   else
     title 高専カンファレンスlol
+    meta(name="twitter:title" content="高専カンファレンスlol")
 
   link(rel="stylesheet" href="./styles/style.css")
   link(rel="icon" href="./images/favicon/favicon.ico")
