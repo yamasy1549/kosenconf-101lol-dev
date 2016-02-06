@@ -64,12 +64,14 @@
       display: block;
       line-height: $nav-height;
       padding: 0 20px;
+      width: 30%;
+      text-align: right;
 
       a { text-decoration: none; }
     }
 
     .menu {
-      margin: 0 10px;
+      margin: 0;
       display: block;
       height: 60px;
     }
@@ -79,7 +81,13 @@
 
       &:first-child {
         display: block;
-        left: calc(50% - 56px/2);
+        width: 70%;
+        padding-bottom: 60px;
+
+        .top-img {
+          position: absolute;
+          left: calc(50% - 56px/2);
+        }
       }
     }
 
