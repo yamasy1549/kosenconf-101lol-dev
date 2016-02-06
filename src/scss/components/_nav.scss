@@ -36,11 +36,15 @@
       .hover-circle-blue.active { @include circle-blue; }
 
       .ja { display: none; }
+    }
+  }
+}
 
-      &:hover {
-        .en { display: none; }
-        .ja { display: inline; }
-      }
+@media (min-width: 900px) {
+  .menu-item {
+    &:hover {
+      .en { display: none; }
+      .ja { display: inline; }
     }
   }
 }
