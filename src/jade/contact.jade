@@ -1,7 +1,8 @@
 mixin member(name, img, position, introduction)
   .member
     .icon
-      img(src="./images/members/#{img}" alt="@#{name}のアイコン")
+      a(href="https://twitter.com/#{name}" title="twitter - #{name}" target="_blank")
+        img(src="./images/members/#{img}" alt="@#{name}のアイコン" target="_blank")
     .name
       a(href="https://twitter.com/#{name}" title="twitter - #{name}") @#{name}
     p.position
@@ -32,8 +33,8 @@ html(lang="ja")
 
         h2.circle-green lol実行委員の紹介
         .members
-          +member("_shuft", "shuft.png", "実行委員長", "")
-          +member("raryosu", "raryosu.png", "副実行委員長 / 広報", "")
+          +member("_shuft", "shuft.png", "実行委員長", "ｻﾊﾞ…ｻﾊﾞｻﾊﾞｯ…")
+          +member("raryosu", "raryosu.png", "副実行委員長 / 広報", "おじさんです")
           +member("denari01", "denari01.jpg", "会計 / スポンサー担当", "")
           +member("Iruyan_Zak", "Iruyan_Zak.png", "ブース発表 / 会場設営", "TeX+レポート=マラソン開発(つら楽しい)")
           +member("zakuro9715", "zakuro9715.png", "配信 / プレゼン発表", "")
@@ -41,14 +42,14 @@ html(lang="ja")
           +member("yamasy1549", "yamasy1549.png", "見習いデザイナー / サイト", "食う寝る食う食う")
           +member("mc475_46", "mc475_46.jpg", "配信", "電気系の情報系です")
           +member("theoldmoon0602", "theoldmoon0602.jpg", "ブース発表", "高専カンファレンスびぎなーです")
-          +member("ig98n", "ig98n.png", "プレゼン発表", "")
+          +member("ig98n", "ig98n.png", "プレゼン発表", "メガネ美少女に生まれたかった。")
           +member("luna01926", "luna01926.jpg", "プレゼン発表", "羊担当です")
         .members
-          +member("spade", "spade.png", "受付", "")
-          +member("tatuu", "tatuu.jpg", "会場設営", "")
+          +member("spade630", "spade.png", "受付", "")
+          +member("ta_twoo", "tatuu.jpg", "会場設営", "")
           +member("amiko_soccer", "ami.png", "", "")
           +member("zoom4638", "zoom4638.jpg", "懇親会", "おんなのこになりたい")
-          +member("sinatikkkkku", "sinatikkkkku.jpg", "受付", "")
+          +member("sinatikkkkku", "sinatikkkkku.jpg", "受付", "手書きレポートは楽しいめう(錯乱)")
 
     include ./_footer
     include ./_scripts
