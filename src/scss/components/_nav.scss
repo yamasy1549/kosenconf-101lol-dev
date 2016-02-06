@@ -34,6 +34,13 @@
       .hover-circle-yellow.active { @include circle-yellow; }
       .hover-circle-green.active { @include circle-green; }
       .hover-circle-blue.active { @include circle-blue; }
+
+      .ja { display: none; }
+
+      &:hover {
+        .en { display: none; }
+        .ja { display: inline; }
+      }
     }
   }
 }
