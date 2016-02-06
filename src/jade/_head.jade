@@ -1,24 +1,26 @@
-meta(charset="UTF-8")
-meta(name="viewport" content="width=device-width,initial-scale=1")
+mixin head(title, type)
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width,initial-scale=1")
 
-meta(name="description" content="高専カンファレンスlolの公式サイトです。テーマは「lol(lots of laugh)」、好奇心をくすぐられるような面白い発表・展示を行います。")
+  meta(name="description" content="高専カンファレンスlolの公式サイトです。テーマは「lol(lots of laugh)」、好奇心をくすぐられるような面白い発表・展示を行います。")
 
-meta(property="og:type" content="website")
-meta(property="og:title" content="高専カンファレンスlol")
-meta(property="og:description" content="高専カンファレンスlolの公式サイトです。テーマは「lol(lots of laugh)」、好奇心をくすぐられるような面白い発表・展示を行います。")
-meta(property="og:image" content="https://raw.githubusercontent.com/yamasy1549/kosenconf-101lol/gh-pages/images/og-image.png")
-meta(property="og:url" content="http://kosenconf.me")
-meta(property="og:site_name" content="高専カンファレンスlol")
-meta(property="og:locale" content="ja_JP")
-meta(property="fb:admins" content="1017782938294691")
-meta(property="fb:app_id" content="1017782938294691")
-meta(name="twitter:card" content="summary_large_image")
-meta(name="twitter:site" content="@kosenconf")
-meta(name="twitter:creator" content="@kosenconf")
-meta(name="twitter:title" content="高専カンファレンスlol")
-meta(name="twitter:description" content="高専カンファレンスlolの公式サイトです。テーマは「lol(lots of laugh)」、好奇心をくすぐられるような面白い発表・展示を行います。")
-meta(name="twitter:image" content="https://raw.githubusercontent.com/yamasy1549/kosenconf-101lol/gh-pages/images/og-image.png")
+  meta(property="og:type" content="#{type}")
+  meta(property="og:image" content="https://raw.githubusercontent.com/yamasy1549/kosenconf-101lol/gh-pages/images/og-image.png")
+  meta(property="og:url" content="http://kosenconf.me")
+  meta(property="og:site_name" content="高専カンファレンスlol")
+  meta(property="og:locale" content="ja_JP")
+  meta(property="fb:admins" content="1017782938294691")
+  meta(property="fb:app_id" content="1017782938294691")
+  meta(name="twitter:card" content="summary_large_image")
+  meta(name="twitter:site" content="@kosenconf")
+  meta(name="twitter:creator" content="@kosenconf")
+  meta(name="twitter:image" content="https://raw.githubusercontent.com/yamasy1549/kosenconf-101lol/gh-pages/images/og-image.png")
 
-link(rel="stylesheet" href="./styles/style.css")
-link(rel="icon" href="./images/favicon/favicon.ico")
-link(rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png")
+  if title
+    title #{title} | 高専カンファレンスlol
+  else
+    title 高専カンファレンスlol
+
+  link(rel="stylesheet" href="./styles/style.css")
+  link(rel="icon" href="./images/favicon/favicon.ico")
+  link(rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png")

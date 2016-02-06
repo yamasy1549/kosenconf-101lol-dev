@@ -1,11 +1,13 @@
+include ./_head
+include ./_global-nav
+
 doctype html
 html(lang="ja")
   head
-    include ./_head
-    title 高専カンファレンスlol
+    +head("", "website")
 
   body
-    include ./_global-nav
+    +global-nav()
 
     div.wrapper
       section#top

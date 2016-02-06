@@ -1,0 +1,11 @@
+mixin member(name, img, position, introduction)
+  .member
+    .icon
+      a(href="https://twitter.com/#{name}" title="twitter - #{name}" target="_blank")
+        img(src="./images/members/#{img}" alt="@#{name}のアイコン" target="_blank")
+    .name
+      a(href="https://twitter.com/#{name}" title="twitter - #{name}") @#{name}
+    p.position
+      | #{position}
+    p.introduction
+      small #{introduction}
