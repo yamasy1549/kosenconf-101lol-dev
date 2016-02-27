@@ -1,3 +1,55 @@
 .section {
-  margin: 80px auto;
+  margin: 100px auto;
+
+  > * { padding-left: 60px; }
+
+  ul, ol { margin-left: 20px; }
+
+  table {
+    width: 90%;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    ul {
+      margin-left: 0;
+      padding-left: 20px;
+    }
+  }
+
+  .btn,
+  button {
+    margin: 10px 0;
+  }
+
+  @media (max-width: 900px) {
+    margin: 50px auto;
+
+    > * { padding-left: 0; }
+  }
+}
+
+.wrapper {
+  [class*="circle-"] {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    background-size: 100px;
+    line-height: 100px;
+    padding-left: 60px;
+
+    @media (max-width: 900px) {
+      background-size: 60px;
+      line-height: 60px;
+      padding-left: 40px;
+      letter-spacing: 1px;
+    }
+  }
+
+  margin: 0 100px 100px 100px;
+
+  @media (max-width: 900px) {
+    margin: 100px 10px 50px 10px;
+  }
 }

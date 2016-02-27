@@ -1,0 +1,49 @@
+#contact {
+  .members {
+    display: table;
+    margin: 0 -16px 32px;
+
+    .member {
+      display: table-cell;
+      width: 20%;
+      padding: 0 16px;
+
+      .icon {
+        width: 80%;
+        max-width: 170px;
+        margin: 0 auto 16px;
+        border: 6px solid lighten($lol-green, 10%);
+        border-radius: 50%;
+
+        img { border-radius: 50%; }
+      }
+
+      .name {
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .position {
+        text-align: center;
+      }
+
+      .introduction {
+        text-align: center;
+      }
+    }
+  }
+
+    @media (max-width: 900px) {
+      .members {
+        margin: 0;
+        display: block;
+
+        .member {
+          width: 100%;
+          display: block;
+          padding: 0;
+          margin: 0 0 40px;
+        }
+      }
+    }
+}

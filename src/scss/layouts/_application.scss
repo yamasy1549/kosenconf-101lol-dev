@@ -1,0 +1,7 @@
+.booth-size {
+  width: 60%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
+}
