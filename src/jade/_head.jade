@@ -1,8 +1,10 @@
 mixin head(title, type)
+  - var description = "高専カンファレンスlolの公式サイトです。4/30（土）兵庫県の明石高専にて開催。テーマは「lol(lots of laugh)」 好奇心をくすぐられるような面白い発表・展示を行います。";
+
   meta(charset="UTF-8")
   meta(name="viewport" content="width=device-width,initial-scale=1")
 
-  meta(name="description" content="高専カンファレンスlolの公式サイトです。テーマは「lol(lots of laugh)」、好奇心をくすぐられるような面白い発表・展示を行います。")
+  meta(name="description" content="#{description}")
 
   meta(property="og:type" content="#{type}")
   meta(property="og:image" content="https://raw.githubusercontent.com/yamasy1549/kosenconf-101lol/gh-pages/images/og-image.png")
@@ -14,7 +16,7 @@ mixin head(title, type)
   meta(name="twitter:card" content="summary_large_image")
   meta(name="twitter:site" content="@kosenconf")
   meta(name="twitter:creator" content="@kosenconf")
-  meta(name="twitter:description" content="高専カンファレンスlolの公式サイトです。テーマは「lol(lots of laugh)」、好奇心をくすぐられるような面白い発表・展示を行います。")
+  meta(name="twitter:description" content="#{description}")
   meta(name="twitter:image" content="https://raw.githubusercontent.com/yamasy1549/kosenconf-101lol/gh-pages/images/og-image.png")
 
   if title

@@ -9,6 +9,7 @@
   color: $black;
   font-family: $primary-font;
   line-height: 1;
+  position: relative;
 
   @media (max-width: 900px) {
     font-size: 14px;
@@ -102,5 +103,25 @@ code {
   &:hover,
   &:active {
     @include circle-blue;
+  }
+}
+
+.animhop {
+  @include animhop;
+}
+
+.animhop-hover {
+  &:hover {
+    @include animhop;
+  }
+}
+
+.animrot {
+  @include animrot;
+}
+
+.animrot-hover {
+  &:hover {
+    @include animrot;
   }
 }

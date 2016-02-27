@@ -64,6 +64,10 @@
   color: $color;
   text-decoration: underline;
   transition: $fade;
+
+  &:hover {
+    color: lighten($color, 10%);
+  }
 }
 
 @mixin strong {
@@ -246,4 +250,69 @@
 @mixin circle-blue {
   background-image: url('../images/circle-blue.png');
   background-size: contain;
+}
+
+@keyframes animHop {
+  0% { transform: scale(0.8, 0.8); }
+  40% { transform: scale(1.2, 1.2); }
+  60% { transform: scale(1, 1); }
+  80% { transform: scale(1.1, 1.1); }
+  100% { transform: scale(1, 1); }
+}
+
+@mixin animhop {
+  animation: animHop 0.5s ease-out;
+  transform-origin: 50% 50%;
+
+  &:hover {
+    animation: animHop 0.5s ease-out;
+    transform-origin: 50% 50%;
+  }
+}
+
+@keyframes animPopLoop {
+  0%, 100% { transform: scale(1, 1); }
+  30% { transform: scale(1.2, 1.2); }
+  60% { transform: scale(0, 0); }
+}
+
+@keyframes animPop {
+  0% { transform: scale(1, 1); }
+  100% { transform: scale(1.2, 1.2); }
+}
+
+@mixin animpop {
+  animation: animPop 0.5s ease-out;
+  transform-origin: 50% 50%;
+
+  &:hover {
+    animation: animPop 0.5s ease-out;
+    transform-origin: 50% 50%;
+  }
+}
+
+@keyframes animRot {
+  0% { transform: rotate(0deg); }
+  40% { transform: rotate(180deg); }
+  60% { transform: rotate(0deg); }
+  80% { transform: rotate(-360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@mixin animrot {
+  animation:
+    animPop 0.1s ease-out,
+    animRot 0.5s ease-out 0.1s;
+  transform-origin: 50% 50%;
+
+  &:hover {
+    animation:
+      animPop 0.1s ease-out,
+      animRot 0.5s ease-out 0.1s;
+    transform-origin: 50% 50%;
+  }
+}
+
+@mixin animRandomPop($delay) {
+  animation: animPopLoop 10s infinite ease-out $delay;
 }

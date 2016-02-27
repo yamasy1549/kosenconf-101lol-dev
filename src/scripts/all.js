@@ -36,8 +36,27 @@ $(document).ready(function() {
             open = true;
         };
     });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $(".backtotop").fadeIn();
+        } else {
+            $(".backtotop").fadeOut();
+        }
+    });
+    $(".backtotop #backToTopBtn").click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+
+    // twitter
+    var url = encodeURIComponent(document.URL);
+    var title = encodeURIComponent(document.title + " #kosenconf\n");
+    var shareLink = "http://twitter.com/share?url=" + url + "&text=" + title;
+    $('#twitter')[0].href = shareLink;
 });
 
+// google analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

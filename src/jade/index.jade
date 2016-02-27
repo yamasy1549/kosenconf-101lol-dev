@@ -11,7 +11,13 @@ html(lang="ja")
 
     div.wrapper
       section#top
-        h1: img.toplogo(src="./images/toplogo.png" alt="高専カンファlol")
+        h1.toplogo
+          #lol-circle-blue
+          #lol-circle-green
+          #lol-circle-yellow
+          #lol-circle-orange
+          #lol-circle-pink
+          img#lol-logo(src="./images/toplogo.png" alt="高専カンファレンスlol ロゴ")
         p.lead
           | Let's share "lol" with everybody!!
           br
@@ -23,7 +29,11 @@ html(lang="ja")
           strong "lol" 
           | 始まります
           br
-          a.btn(href="https://kosenconf.doorkeeper.jp/events/37652" target="_blank") 高専カンファレンスlol 参加申し込みはこちら
+        p.lead
+          a.btn(href="https://kosenconf.doorkeeper.jp/events/37652" target="_blank") 参加登録はこちら
+          a.btn.presentation(href="https://docs.google.com/forms/d/1y_AtQeDDOHcNzOtKRP4C15bVi71fO0lsHfvIdi56U0o/viewform" target="_blank") 一般発表 / LT 登壇希望者
+          a.btn.booth(href="http://goo.gl/forms/5wkQucuhHP" target="_blank") ブース発表希望者
+          a.btn.booth(href="https://docs.google.com/forms/d/1YHtlVZmnemxaV3xUHbDrAcEaCXEzQbL5eZlHRNsoqYc/viewform" target="_blank") ポスター掲示希望者
 
       section.section#about
         h2.circle-pink ABOUT
@@ -125,6 +135,9 @@ html(lang="ja")
           | 。
           br
           | 参加できなくなった場合、前日までにキャンセルをお願いします。
+
+        h3 Q6. 配信はありますか？
+        p はい。プレゼン発表・ブース発表についてはUstreamで配信を行う予定です。
 
       section.section#calling-cards
         h2.circle-yellow 名刺デザイン代行

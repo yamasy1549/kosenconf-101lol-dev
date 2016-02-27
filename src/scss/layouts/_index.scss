@@ -58,20 +58,81 @@
   > * { padding: 0; }
 
   .toplogo {
-    display: block;
+    position: relative;
     margin: 100px auto 0 auto;
     width: 60%;
+  }
+
+  #lol-logo { position: relative; }
+
+  #lol-circle-pink,
+  #lol-circle-orange,
+  #lol-circle-yellow,
+  #lol-circle-green,
+  #lol-circle-blue {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+
+  #lol-circle-pink {
+    @include animRandomPop(0.5s);
+    background-color: $lol-pink;
+    width: 16%;
+    height: 23%;
+    top: 42%;
+    left: 28%;
+  }
+
+  #lol-circle-orange {
+    @include animRandomPop(3.2s);
+    background-color: $lol-orange;
+    width: 11%;
+    height: 16%;
+    top: 23%;
+    left: 45%;
+  }
+
+  #lol-circle-yellow {
+    @include animRandomPop(2.3s);
+    background-color: $lol-yellow;
+    width: 26%;
+    height: 37%;
+    top: 49%;
+    left: 8%;
+  }
+
+  #lol-circle-green {
+    @include animRandomPop(3.7s);
+    background-color: $lol-green;
+    width: 20%;
+    height: 28%;
+    top: 70%;
+    left: 35%;
+  }
+
+  #lol-circle-blue {
+    @include animRandomPop(1s);
+    background-color: $lol-blue;
+    width: 17%;
+    height: 24%;
+    top: 44%;
+    left: 62%;
   }
 
   .lead {
     text-align: center;
     line-height: 2.5;
+
+    .btn { margin: 10px; }
   }
 
-  @media (max-width: 900px) {
-    .toplogo {
-      width: 100%;
+  @media (max-width: 700px) {
+    .lead {
+      .btn { margin: 6px 0; }
     }
+
+    .toplogo { width: 100%; }
   }
 }
 
@@ -133,7 +194,7 @@
         width: 80%;
         max-width: 170px;
         margin: 0 auto 16px;
-        border: 8px solid lighten($lol-green, 10%);
+        border: 6px solid lighten($lol-green, 10%);
         border-radius: 50%;
 
         img { border-radius: 50%; }
@@ -169,43 +230,65 @@
     }
 }
 
-.disabled {
-  position: relative;
-
-  &:hover {
-    &:before {
-      content: '募集開始は2/7（日） 19:30です！';
-      display: block;
-      position: absolute;
-      top: -54px;
-      left: 0;
-      color: $white;
-      background-color: $lol-orange;
-      font-size: 15px;
-      padding: 10px 20px;
-      z-index:1;
-      opacity: $semitransparent;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -20px;
-      left: 30%;
-      border-top: 14px solid $lol-orange;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      z-index:1;
-      opacity: $semitransparent;
-    }
-  }
-}
-
 .booth-size {
   width: 60%;
 
   @media (max-width: 900px) {
     width: 100%;
   }
+}
+
+.backtotop {
+  position: relative;
+  display: none;
+
+  #twitter,
+  #backToTopBtn {
+    position: fixed;
+    display: block;
+    color: $white;
+    background-color: $lol-blue;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    opacity: $semitransparent;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: lighten($lol-blue, 10%);
+    }
+  }
+
+  #twitter {
+    color: $official-twitter;
+    background-color: $white;
+    border: 2px solid $official-twitter;
+    bottom: 80px;
+    padding: 12px;
+
+    &:hover,
+    &:active {
+      background-color: $official-twitter;
+    }
+
+    &:hover path,
+    &:active path {
+      fill: $white;
+    }
+  }
+}
+
+#jrkobe-linemark {
+  color: $white;
+  background-color: #0277C4;
+  padding: 0 4px 0 5px;
 }
