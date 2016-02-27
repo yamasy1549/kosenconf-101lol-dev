@@ -7,6 +7,7 @@ import jade         from "gulp-jade";
 import sass         from "gulp-sass";
 import sassGlob     from "gulp-sass-glob";
 import autoprefixer from "gulp-autoprefixer";
+import sassLint     from "gulp-sass-lint";
 import imagemin     from "gulp-imagemin";
 import pngquant     from "imagemin-pngquant";
 import uglify       from "gulp-uglify";
@@ -64,6 +65,14 @@ gulp.task("scss", () => {
         .pipe(autoprefixer())
         .pipe(gulp.dest(path.join(DEST_DIR, "styles")));
 });
+
+gulp.task("sass-lint", () => {
+    return gulp.src(path.join(SCSS_DIR, "*/*.s+(a|c)ss"))
+        .pipe(sassLint())
+        .pipe(sassLint.format())
+        .pipe(sassLint.failOnError());
+});
+gulp.task("scss-lint", ["sass-lint"]);
 
 gulp.task("imagemin", () => {
     return gulp.src(path.join(IMAGES_DIR, "**/*.{jpg,jpeg,png,gif,svg}"))
