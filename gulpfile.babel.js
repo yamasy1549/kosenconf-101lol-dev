@@ -66,13 +66,13 @@ gulp.task("scss", () => {
 });
 
 gulp.task("imagemin", () => {
-    gulp.src(path.join(IMAGES_DIR, "**/*.{jpg,jpeg,png,gif,svg}"))
+    return gulp.src(path.join(IMAGES_DIR, "**/*.{jpg,jpeg,png,gif,svg}"))
         .pipe(imagemin(IMAGEMIN_OPTIONS))
         .pipe(gulp.dest(path.join(DEST_DIR, "images")));
 });
 
 gulp.task("jsmin", () => {
-    gulp.src(path.join(SCRIPTS_DIR, "**/*.js"))
+    return gulp.src(path.join(SCRIPTS_DIR, "**/*.js"))
         .pipe(uglify({preserveComments: 'some'}))
         .pipe(gulp.dest(path.join(DEST_DIR, "scripts")));
 });
