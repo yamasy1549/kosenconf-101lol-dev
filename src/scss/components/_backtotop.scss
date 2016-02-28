@@ -1,11 +1,11 @@
 .backtotop {
-  position: relative;
   display: none;
+  position: relative;
 
   #twitter,
   #backToTopBtn {
-    position: fixed;
     display: block;
+    position: fixed;
     color: $white;
     background-color: $lol-blue;
     font-weight: bold;
