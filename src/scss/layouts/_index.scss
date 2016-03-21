@@ -85,3 +85,19 @@
     table { margin: 0 auto; }
   }
 }
+
+#design {
+  .decoicon {
+    display: inline-block;
+    width: 300px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 20px $light-gray;
+  }
+
+  .poster {
+    display: inline-block;
+    width: 300px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 20px $light-gray;
+  }
+}
