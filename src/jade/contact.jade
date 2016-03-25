@@ -22,6 +22,11 @@ html(lang="ja")
             | kosenconf-lol[at]googlegroups.com ([at]を@に変更してください)
           p: a.btn(href="http://goo.gl/forms/MloVkxCYRB" target="_blank") 質問・連絡フォームはこちら
 
+        h2.circle-green 公式Twitter
+        section
+          a.twitter-timeline(href="https://twitter.com/kosenconf" data-widget-id="711762762381135872")
+            @kosenconfのツイート
+
         h2.circle-green lol実行委員の紹介
         section
           .members
@@ -46,3 +51,4 @@ html(lang="ja")
     include ./_footer
     include ./_scripts
     +scripts("contact")
+    script(src="./scripts/twitter.js")
