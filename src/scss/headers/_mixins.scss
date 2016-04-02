@@ -240,6 +240,34 @@
   &:active {
     color: $white;
     background-color: $light-gray;
+    position: relative;
+
+    &:before {
+      content: '募集は終了しました';
+      display: block;
+      position: absolute;
+      top: -54px;
+      left: 0;
+      color: $white;
+      background-color: $lol-orange;
+      font-size: 15px;
+      padding: 10px 20px;
+      z-index:1;
+      opacity: $semitransparent;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -20px;
+      left: 30%;
+      border-top: 14px solid $lol-orange;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      z-index:1;
+      opacity: $semitransparent;
+    }
   }
 }
 
