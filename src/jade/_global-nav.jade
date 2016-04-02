@@ -15,6 +15,13 @@ mixin global-nav
       li.nav-item: a.hover-circle-green.animhop-hover(href="./contact.html")
         span.en CONTACT
         span.ja 連絡先
-      li.nav-item: a.hover-circle-blue.animhop-hover(href="./sponsors.html")
-        span.en SPONSORS
-        span.ja スポンサー募集
+      li.nav-item.dropdown: a.animhop-hover(href="")
+        span.en OTHERS
+        span.ja その他
+        ul.dropdown-lists
+          li.nav-item: a.hover-circle-blue.animhop-hover(href="./sponsors.html")
+            span.en SPONSORS
+            span.ja スポンサー募集
+          li.nav-item: a.hover-circle-blue.animhop-hover(href="./rules.html")
+            span.en RULES
+            span.ja 行動規範

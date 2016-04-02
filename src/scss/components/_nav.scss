@@ -1,5 +1,29 @@
 .global-nav {
   box-shadow: $shadow;
+  height: $nav-height;
+
+  .dropdown {
+    .dropdown-lists {
+      display: none;
+      padding: 0;
+    }
+
+    &:hover,
+    &:active {
+      .dropdown-lists {
+        display: block;
+      }
+    }
+
+    @media (max-width: 900px) {
+      > a > span { display: none; }
+
+      .dropdown-lists {
+        display: block;
+        flex: 1;
+      }
+    }
+  }
 
   .menu-btn { display: none; }
 
@@ -47,8 +71,8 @@
 
       @media (min-width: 900px) {
         &:hover {
-          .en { display: none; }
-          .ja { display: inline; }
+          > a > .en { display: none; }
+          > a > .ja { display: inline; }
         }
       }
     }
@@ -60,7 +84,6 @@
     position: fixed;
     top: -3px;
     width: 100%;
-    background-color: $white;
     z-index: 2;
     opacity: $semitransparent;
 
@@ -80,6 +103,7 @@
       margin: 0;
       display: block;
       height: 60px;
+      background-color: $white;
     }
 
     .nav-item {
