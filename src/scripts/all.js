@@ -30,7 +30,7 @@ $(document).ready(function() {
             open = false;
         } else {
             $('.menu').animate({
-                height: '370px'
+                height: '430px'
             }, 300);
             $('.nav-item').css('display', 'block');
             open = true;
@@ -46,6 +46,19 @@ $(document).ready(function() {
     });
     $(".backtotop #backToTopBtn").click(function () {
         $('body, html').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+    $(".backtotop #notice-callingcard").hover(function () {
+        $('.notice-baloon').addClass("animhop").toggle();
+        return false;
+    });
+    $(".backtotop #notice-callingcard").click(function () {
+        if(location.href == "http://kosenconf.me/") {
+            target = $("#about");
+            $("body, html").animate({scrollTop: target.offset().top}, 500);
+        } else {
+            location.href = "http://kosenconf.me/#about";
+        }
         return false;
     });
 
