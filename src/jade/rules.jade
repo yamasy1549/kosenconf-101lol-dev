@@ -1,0 +1,62 @@
+include ./_head
+include ./_global-nav
+
+doctype html
+html(lang="ja")
+  head
+    +head("おねがい", "article", "高専カンファレンスlolは、高専内外に開かれた「lol (lots of laugh)」な会を目指しています。参加者が楽しい時間を過ごすことができるよう、ご協力をおねがいします。")
+
+  body
+    +global-nav()
+
+    div.wrapper
+      section.section#access
+        h1#rules RULES
+
+        h2.circle-blue 高専カンファレンスlolをお楽しみいただくために
+        section
+          p
+            | 高専カンファレンスlolは、高専内外に開かれた「lol (lots of laugh)」な会を目指しています。
+            br
+            | 参加者が楽しい時間を過ごすことができるよう、以下のことを守ってください。
+          h3 lol (lots of laugh)の定義
+          section
+            p
+              | 本カンファレンスの"lol"は「多くの人々の好奇心をくすぐる面白さ」を意味しています。
+              | 馬鹿笑いや差別的な発言などによる笑いなどは含みません。
+          h3 楽しい会にするために
+          section
+            ul
+              li 交流しやすい雰囲気の会にしましょう
+              li 爽やかな行動・発言を心がけましょう
+              li 参加者全員で楽しい会をつくっていきましょう
+          h3 受け入れがたい行為
+          section
+            ul
+              li 威嚇的な行為
+              li 虐待的な行為
+              li 軽蔑的な行為
+              li 屈辱的な行為
+              li
+                | 迷惑行為
+                ul
+                  li 性別・性的趣向・宗教・障害に関する攻撃的なコメント
+                  li プレゼン等への性的画像の不適切な使用
+                  li 嫌がらせとなる写真撮影や録音
+                  li 本カンファレンスの進行に対する継続的な妨害
+                  li 不適切な身体的接触
+            p
+              | 上記の受け入れがたい行為を発見した場合、もしくは被害を受けた場合は直ちに本カンファレンススタッフにお知らせください。
+              | スタッフは、カンファレンス期間中、参加者の皆様が安心して楽しく過ごしていただくことができるように応対いたします。
+            h3 適用範囲
+            section
+              p
+                | 本カンファレンス参加者すべて（スポンサー・一般参加者・発表者・スタッフ）を上記の内容の適用範囲とします。
+            h3 連絡先
+            section
+              p
+                | 高専カンファレンスlol 実行委員会 kosenconf-lol[at]googlegroups.com（[at]を@に変更してください）
+
+    include ./_footer
+    include ./_scripts
+    +scripts("rules")
