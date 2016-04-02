@@ -3,7 +3,8 @@
   position: relative;
 
   #twitter,
-  #backToTopBtn {
+  #backToTopBtn,
+  #notice-callingcard {
     display: block;
     position: fixed;
     color: $white;
@@ -43,6 +44,52 @@
     &:hover path,
     &:active path {
       fill: $white;
+    }
+  }
+
+  #notice-callingcard {
+    color: $yellow;
+    background-color: $white;
+    border: 2px solid $yellow;
+    bottom: 140px;
+    padding: 12px;
+
+    &:hover,
+    &:active {
+      color: $white;
+      background-color: $yellow;
+    }
+  }
+
+  .notice-baloon {
+    background-color: $yellow;
+    color: $white;
+    display: none;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    padding: 20px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 30%;
+      right: -28px;
+      border-top: 14px solid transparent;
+      border-left: 14px solid $yellow;
+      border-right: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+    }
+
+    span {
+      display: block;
+      line-height: 2;
+      font-size: 1rem;
+    }
+
+    .price {
+      font-size: 1.4rem;
     }
   }
 }
