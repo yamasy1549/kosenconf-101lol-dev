@@ -1,0 +1,53 @@
+include ./_head
+include ./_global-nav
+
+doctype html
+html(lang="ja")
+  head
+    +head("公式◯◯", "article", "高専カンファレンスlol 公式素材や公式グッズの紹介です。")
+
+  body
+    +global-nav()
+
+    div.wrapper
+      section.section#goods
+        h1 GOODS
+
+        h2.circle-blue アイコン素材
+        section
+          p Twitter などのアイコンをデコって参加者とつながろう！
+          a.decoicon(href="http://icondecotter.jp/detail.php?id=26972" target="_blank")
+            img(src="./images/decoicon-lol.png" alt="アイコン素材 lol")
+          a.decoicon(href="http://icondecotter.jp/detail.php?id=26974" target="_blank")
+            img(src="./images/decoicon-circles.png" alt="アイコン素材 丸")
+
+        h2.circle-blue ポスター
+        section
+          a.poster(href="https://www.dropbox.com/s/0xpi0yza5ujxk1a/lolconf-poster-a.pdf?dl=0" target="_blank")
+            img(src="./images/poster-a.png" alt="ポスター1枚目")
+          .poster
+            img(src="./images/poster-comingsoon.png" alt="ポスター2枚目 Coming soon!")
+
+        h2.circle-blue Tシャツ
+        section
+          p
+            | オリジナルTシャツ販売の
+            a(href="https://steers.jp") STEERS
+            | で「高専カンファレンスlol 公式Tシャツ」を販売しています。
+            br
+            small ※購入は任意です。
+          a.shirt(href="https://steers.jp/c/kosenconf-101lol" target="_blank")
+            img(src="./images/shirt.png" alt="Tシャツ")
+
+        h2.circle-blue 名刺
+        section
+          p 4/10（日）まで、名刺代行サービスを行っております。詳しくは
+            a(href="http://kosenconf.me/#calling-cards") こちら
+          a.callingcard(href="http://kosenconf.me/#calling-cards")
+            img(src="./images/calling-card-a.png" alt="名刺見本・オモテ")
+          a.callingcard(href="http://kosenconf.me/#calling-cards")
+            img(src="./images/calling-card-b.png" alt="名刺見本・ウラ")
+
+    include ./_footer
+    include ./_scripts
+    +scripts("goods")
