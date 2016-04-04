@@ -1,5 +1,6 @@
 include ./_head
 include ./_global-nav
+include ./_sponsor
 
 doctype html
 html(lang="ja")
@@ -199,6 +200,14 @@ html(lang="ja")
                 small 締め切り日まではプラン変更が可能です。締め切り以降にキャンセルされた場合は必ず料金をお支払いいただきます。
           h3 名刺見本
           img(src="./images/calling-cards.png" alt="名刺見本")
+
+      section.section#sponsor-lists
+        h2.circle-green スポンサー一覧
+        ul.sponsor-lists
+          +sponsor("ACT135", "act135.png", "http://gijutsusha-syuudan.org/")
+          +sponsor("ACT135", "act135.png", "http://gijutsusha-syuudan.org/")
+          +sponsor("ACT135", "act135.png", "http://gijutsusha-syuudan.org/")
+          +sponsor("ACT135", "act135.png", "http://gijutsusha-syuudan.org/")
 
     include ./_footer
     include ./_scripts

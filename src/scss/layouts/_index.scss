@@ -85,3 +85,43 @@
     table { margin: 0 auto; }
   }
 }
+
+#sponsor-lists {
+  .sponsor-lists {
+    list-style: none;
+    display: table;
+    margin: 0 -16px 32px;
+    min-width: 100%;
+
+    .sponsor {
+      display: table-cell;
+      width: (100%/4);
+      padding: 0 16px;
+
+      .icon {
+        width: 100%;
+        max-width: 170px;
+        margin: 0 auto 16px;
+      }
+
+      .name {
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .sponsor-lists {
+      margin: 0;
+      display: block;
+
+      .sponsor {
+        width: 100%;
+        display: block;
+        padding: 0;
+        margin: 0 0 40px;
+      }
+    }
+  }
+}
