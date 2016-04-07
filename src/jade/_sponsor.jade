@@ -1,7 +1,7 @@
 mixin sponsor(name, img, url)
   li.sponsor
     .icon
-      a(href="#{url}")
+      a(href="#{url}" target="_blank")
         img(src="./images/sponsors/#{img}" alt="#{name}")
     .name
-      a(href="#{url}") #{name} さま
+      a(href="#{url}" target="_blank") #{name} さま
