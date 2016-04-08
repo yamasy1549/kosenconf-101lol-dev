@@ -112,6 +112,12 @@ html(lang="ja")
               a(href="https://www.youtube.com/watch?v=szJrMfStBdU&feature=youtu.be&t=1h38m17s" target="_blank") 高専カンファレンス in 津山2 の様子（Youtube）
           p などなど…
 
+      section.section#sponsor-lists
+        h2.circle-green スポンサー一覧
+        ul.sponsor-lists
+          +sponsor("株式会社chatbox", "chatbox.png", "http://chatbox-inc.com/")
+          +sponsor("ACT135", "act135.png", "http://gijutsusha-syuudan.org/")
+
       section.section#faq
         h2.circle-orange FAQ
         h3 Q1. 誰でも参加できるの？
@@ -200,12 +206,6 @@ html(lang="ja")
                 small 締め切り日まではプラン変更が可能です。締め切り以降にキャンセルされた場合は必ず料金をお支払いいただきます。
           h3 名刺見本
           img(src="./images/calling-cards.png" alt="名刺見本")
-
-      section.section#sponsor-lists
-        h2.circle-green スポンサー一覧
-        ul.sponsor-lists
-          +sponsor("株式会社chatbox", "chatbox.png", "http://chatbox-inc.com/")
-          +sponsor("ACT135", "act135.png", "http://gijutsusha-syuudan.org/")
 
     include ./_footer
     include ./_scripts
