@@ -20,6 +20,7 @@ html(lang="ja")
               th 12:00〜13:00
               td
                 | 受付
+                small  [階段教室]
             tr
               th 13:00〜13:05
               td
@@ -67,61 +68,155 @@ html(lang="ja")
 
         h2.circle-pink#presentation プレゼン発表
         section
-          p プレゼン発表では、一般発表とLightning Talkの2種類の発表形式で募集を行います。
+          p
+            | プレゼン発表の一覧は以下の通りです。
+            br
+            small ※ 4月9日（土）0:00現在
+            br
+            small 発表タイトル・発表者名・発表者情報（名前・リンク）の変更は kosenconf-lol[at]googlegroups.com ([at]を@に変更してください) から承っております。
           h3 一般発表
-          p
-            | 一般発表の発表時間は
-            strong 10分
-            | です。
-          p 例えば、
-          ul
-            li 私、最近こんなもの作りました！
-            li 〇〇のすゝめ
-          p
-            | などなど公的良俗に反しなければ、なんでもOKです。
-            br
-            | 10分というちょっと長い発表時間をフルに活かした、ちょっとディープな発表、してみませんか？
+          table.presentation-timetable
+            tr
+              th 発表順
+              th タイトル
+              th 発表者
+            tr
+              td 1
+              td けんきゅうはいいぞ
+              td izumin5210
+            tr
+              td 2
+              td 組織のトップの良い選び方、そして無能をトップにすることによるその効果。
+              td ノアン
+            tr
+              td 3
+              td 僕たちはなぜ「学ぶ」のだろうか？~高専出身教職勢による教育学入門~
+              td: a(href="https://twitter.com/ARGV_sat777" target="_blank") satuma
+            tr
+              td 4
+              td 2017年最新版！大学生の就活
+              td: a(href="https://twitter.com/marin72_com" target="_blank") なっちゃん
+            tr
+              td 5
+              td どっちつかずの中途半端が考える課外活動と本業の両立について
+              td どくぴー
+
           h3 Lightning Talk
-          p
-            | Lightning Talk の発表時間は
-            strong 5分
-            | です。
-          p たった5分なので、気軽に発表をしてもらえるといいなあ、と思います。
-          ul
-            li 最近興味があって調べたこと
-            li 実は私、こんな趣味があって…
-            li 皆さんに知ってほしいことがあるんです！ etc…
-          p
-            | 布教やステマなどなんでもOKです！
-            br
-            | 発表経験がない現役生の方も、ぜひこの機会に発表してみませんか？
-          p: a.btn(href="./application.html#presentation") プレゼン発表の募集情報はこちら
+          table.presentation-timetable
+            tr
+              th 発表順
+              th タイトル
+              th 発表者
+            tr
+              td 1
+              td 地名のおはなし
+              td: a(href="https://twitter.com/64G806" target="_blank") うに
+            tr
+              td 2
+              td 知られざるロボコン交流会
+              td てんちょ
+            tr
+              td 3
+              td RPiオーディオシステムの自作
+              td もは
+            tr
+              td 4
+              td マルウェア解析してみた
+              td: a(href="https://syobon.jp" target="_blank") しょぼん
+            tr
+              td 5
+              td すぐにできるアプリ開発
+              td: a(href="https://twitter.com/nuratokura" target="_blank") ★RT☆
+            tr
+              td 6
+              td 都市科高専生がコンクリートについて語る
+              td: a(href="https://twitter.com/zakuro9715" target="_blank") zakuro
+            tr
+              td 7
+              td 世界は繋がっている
+              td: a(href="https://twitter.com/Iruyan_Zak" target="_blank") いるやん
+            tr
+              td 8
+              td ラブライブ！で学ぶドメイン駆動しない設計入門
+              td: a(href="https://twitter.com/MITLicense" target="_blank") じゅりあん
+            tr
+              td 9
+              td lolカンファを支える技術
+              td: a(href="https://twitter.com/yamasy1549" target="_blank") やましー
+            tr
+              td 10
+              td Python製Webフレームワークの設計と実装
+              td: a(href="https://twitter.com/c_bata_" target="_blank") カレーメシ
+            tr
+              td 11
+              td D-PRO135°活動紹介
+              td: a(href="https://twitter.com/135_d_pro" target="_blank") D-PRO135°
+            tr
+              td 12
+              td
+              td ジースタイラス
 
         h2.circle-pink#booth ブース発表
         section
           p
-            | 高専カンファレンスlolでは「ブース発表」を企画しています。
+            | ブース発表の一覧は以下の通りです。
             br
-            | ブース発表では発表者の皆様にブース（机）をご用意します。ブース発表では基本的にどのようなことをしていただくのも自由です。
+            | タイトル・発表者情報は変更になる場合がありますが、発表そのものが変わることはありません。
             br
-            | 例えばこんな発表はいかがでしょうか？
-          ul
-            li 俺が作った工作物を見てくれ！
-            li 今こういうことで悩んでいるんだ、助けてくれ！
-            li うちの会社・俺はこんなことやってるんですよ〜
-            li こんな研究してみたよ！どう？
-            li 俺流高専カンファレンスlol限定グッズを売りたい・配りたい！
-            li 30分で何か作る/ライブコーディングするぞ！
-            li 私と握手しませんか？
-            li 私（たち）と一緒にこんなことやってみませんか？
+          img.booth-size(src="./images/room/booth-size.png" alt="180cm四方のブースです。机の奥行きは45cm、隣のブースとの間は50cmあります。")
           p
-            | また、ブース発表会場での宣伝ポスターの掲示の依頼も受け付けております。
+            small ※ 4月9日（土）0:00現在
             br
-            | その他、やってみたいことがあれば、お気軽に運営にお問い合わせください！
-          h3 宣伝ポスターについて
-          p また、ブース発表会場でのポスターの掲示の依頼も受け付けております。
-          p 企業様の宣伝用ポスターから、イベント告知、絵を描いてみた！まで、様々なポスターの掲示依頼を募集しています。
-          p: a.btn(href="./application.html#booth") ブース発表・ポスター掲示の募集情報はこちら
+            small 発表タイトル・発表者名・発表者情報（名前・リンク）の変更は kosenconf-lol[at]googlegroups.com ([at]を@に変更してください) から承っております。
+          table.booth-timetable
+            tr
+              th ブース番号
+              th タイトル
+              th 発表者
+            tr
+              td 1
+              td ｻﾊﾞﾉﾋｶﾘﾓﾉ
+              td: a(href="http://coils.work" target="_blank") Shuft鯖
+            tr
+              td 2
+              td カップル専用アプリ触れます
+              td: a(href="https://blog.unasuke.com" target="_blank") うなすけ
+            tr
+              td 3
+              td 
+              td: a(href="http://chatbox-inc.com/" target="_blank") chatbox
+            tr
+              td 4
+              td FREE HUG
+              td いらいざ
+            tr
+              td 5
+              td CTFコンテスト
+              td: a(href="https://akashisn.azurewebsites.net/" target="_blank") Akashi_SN
+            tr
+              td 6
+              td 新しいソリューションの紹介
+              td: a(href="http://Nishimago.me" target="_blank") うに
+            tr
+              td 7
+              td 
+              td GitHub Japan
+            tr
+              td 8
+              td 経営情報学科に通った話
+              td Yuya Oka
+            tr
+              td 9
+              td 素晴らしい僕のいるコミュニティたち
+              td: a(href="http://denari.link" target="_blank") denari01
+            tr
+              td 10
+              td 防災ゲーム展示
+              td: a(href="https://www.facebook.com/d.pro135.e" target="_blank") D-PRO135°
+            tr
+              td 11
+              td A Whole New Router World
+              td: a(href="http://zopfcode.hateblo.jp/" target="_blank") ルータ芸人（末田卓巳）
 
         h2.circle-pink#party 懇親会
         section

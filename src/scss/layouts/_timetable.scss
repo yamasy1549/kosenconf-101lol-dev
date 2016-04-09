@@ -1,2 +1,15 @@
 #timetable {
+  .booth-size { width: 60%; }
+
+  @media (max-width: 900px) {
+    .presentation-timetable,
+    .booth-timetable {
+      th,
+      tr > td:first-child {
+        display: none;
+      }
+    }
+
+    .booth-size { width: 100%; }
+  }
 }
