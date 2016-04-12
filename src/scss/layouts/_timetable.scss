@@ -12,4 +12,63 @@
 
     .booth-size { width: 100%; }
   }
+
+  .modal-window {
+    transform: translate(0, 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.4s;
+
+    @media (max-width: 650px) {
+      font-size: 12px;
+    }
+
+    &:target {
+      transform: translate(0, 0);
+      opacity: 1;
+      display: block;
+    }
+
+    .modal-inner {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      z-index: 20;
+      margin-left: -325px;
+      width: 650px;
+      max-height: 90%;
+      border-radius: 2px;
+      background: #fff;
+      box-shadow: 0 0 30px rgba($black, 0.6);
+      padding: 40px 60px;
+      overflow-y: overlay;
+      overflow-x: hidden;
+
+      ul { padding: 0; }
+
+      @media (max-width: 650px) {
+        width: 90%;
+        left: 0;
+        margin: auto 5%;
+        padding: 20px 40px;
+      }
+    }
+
+    .modal-close:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+      background: rgba($black, .5);
+    }
+  }
 }

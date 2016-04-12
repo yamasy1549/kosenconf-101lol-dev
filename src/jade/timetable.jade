@@ -175,7 +175,7 @@ html(lang="ja")
               th 発表者
             tr
               td 1
-              td ｻﾊﾞﾉﾋｶﾘﾓﾉ
+              td: a#link-p01(href="#modal-p01")  ｻﾊﾞﾉﾋｶﾘﾓﾉ
               td: a(href="http://coils.work" target="_blank") Shuft鯖
             tr
               td 2
@@ -187,7 +187,7 @@ html(lang="ja")
               td: a(href="http://chatbox-inc.com/" target="_blank") chatbox
             tr
               td 4
-              td FREE HUG
+              td: a#link-p04(href="#modal-p04") FREE HUG
               td いらいざ
             tr
               td 5
@@ -211,12 +211,53 @@ html(lang="ja")
               td: a(href="http://denari.link" target="_blank") denari01
             tr
               td 10
-              td 防災ゲーム展示
+              td: a#link-p10(href="#modal-p10") 防災ゲーム展示
               td: a(href="https://www.facebook.com/d.pro135.e" target="_blank") D-PRO135°
             tr
               td 11
-              td 経営情報学科に通った話
+              td: a#link-p11(href="#modal-p11") 経営情報学科に通った話
               td Yuya Oka
+
+        section.modal-window#modal-p01
+          .modal-inner
+            p
+              | 鯖です。ﾋｶﾘﾓﾉを展示します。いままで鯖名義でやってきた工作物展示を行います。
+              br
+              | 主に、光る(ピックアップ)ギターを実際に展示してみてもらいつつ適度に自分の解説を入れる具合になると思います。
+              br
+              | ですが、これでは少ないと思うのと鯖はﾋｶﾘﾓﾉなので授業用に作ったNode.jsを用いたバーサライタプログラムジェネレータ(改)とArduinoを用いて、バーサライタの展示をできたらと思います。
+              br
+              | ジェネレータを用いることで簡単にプログラムが作れるので、バーサライタで文字や絵の表現ができるような体験展示を予定しています。
+          a.modal-close(href="#link-p01")
+        section.modal-window#modal-p04
+          .modal-inner
+            p FREE HUGやります、待ってます。
+          a.modal-close(href="#link-p04")
+        section.modal-window#modal-p10
+          .modal-inner
+            p
+              | D-PRO135°（明石高専防災団）は、明石高専で防災士資格を取得した学生有志による、活動組織です。
+              br
+              | 組織発足からまだ9カ月ですが、様々な防災活動を行ってきました。
+              br
+              | その活動の1つが、防災ゲーム「SECOND HAZARD」の製作です。ゲームの製作はすべて自分たちの手で行いました。
+              br
+              | 「遊ぶだけで防災の知識が身につく」をコンセプトに何度も協議を重ね、ゲームの概要を決定。その後、阪神淡路大震災の被災者の方々から被災体験を伺い、ゲームに取り入れました。
+              br
+              | また、コマは3Dプリンタで製作するなど、高専らしさも盛り込んでいます。
+              br
+              | 「SECOND HAZARD」は、町の地図上で駒を進めるボードゲームになっています。
+              br
+              | プレイヤーはスタート地点から、途中で発生する災害を避けつつ、避難所を目指します。また、適する防災グッズを使うことで、災害を乗り超えることも可能です。
+              br
+              | まだまだ試作の段階ですが、協議や修正を重ね、多くの方々に遊んでもらえるゲームを完成させたいです。
+          a.modal-close(href="#link-p10")
+        section.modal-window#modal-p11
+          .modal-inner
+            ul
+              li 全国高専で唯一の宇部高専の経営情報学科に5年間通ったことで学んだこと。
+              li 経営科目について少しだけ触れて新たな分野に手を伸ばすことで自分の強みにすることができるということを伝えたい。
+          a.modal-close(href="#link-p11")
 
         h2.circle-pink#party 懇親会
         section
