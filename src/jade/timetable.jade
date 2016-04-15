@@ -165,7 +165,7 @@ html(lang="ja")
             br
           img.booth-size(src="./images/room/booth-size.png" alt="180cm四方のブースです。机の奥行きは45cm、隣のブースとの間は50cmあります。")
           p
-            small ※ 4月9日（土）0:00現在
+            small ※ 4月15日（金）20:00現在
             br
             small 発表タイトル・発表者名・発表者情報（名前・リンク）の変更は kosenconf-lol[at]googlegroups.com ([at]を@に変更してください) から承っております。
           table.booth-timetable
@@ -191,11 +191,11 @@ html(lang="ja")
               td いらいざ
             tr
               td 5
-              td CTFコンテスト
+              td: a#link-p05(href="#modal-p05") CTFコンテスト
               td: a(href="https://akashisn.azurewebsites.net/" target="_blank") Akashi_SN
             tr
               td 6
-              td 新しいソリューションの紹介
+              td: a#link-p06(href="#modal-p06") サーマルプリンターであそぼ！！！！！
               td: a(href="http://Nishimago.me" target="_blank") うに
             tr
               td 7
@@ -233,6 +233,22 @@ html(lang="ja")
           .modal-inner
             p FREE HUGやります、待ってます。
           a.modal-close(href="#link-p04")
+        section.modal-window#modal-p05
+          .modal-inner
+            p
+              | CTFの紹介スライド発表します。
+              br
+              | 更に興味を持ってくれた方にパソコンが必要ない問題を渡します。
+          a.modal-close(href="#link-p05")
+        section.modal-window#modal-p06
+          .modal-inner
+            p
+              | サーマルプリンターを使ったアプリケーションの実演を行います。
+              br
+              | 普段はレシートの印刷などでよく目にすることが多いですが、シリアル通信を使うことで汎用的に使うこともできます。この発表では、アプリケーションの実演を行いつつ動作の解説を行っていきたいと思います。どんなアプリケーションを実演するかは当日のお楽しみに！！！
+              br
+              | ※あとはOPACも作る予定でしたが、タスクが多すぎたので諦めました。許してください。
+          a.modal-close(href="#link-p06")
         section.modal-window#modal-p10
           .modal-inner
             p
