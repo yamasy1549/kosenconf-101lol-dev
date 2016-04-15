@@ -1,5 +1,6 @@
 include ./_head
 include ./_global-nav
+include ./_timetable
 
 doctype html
 html(lang="ja")
@@ -80,26 +81,11 @@ html(lang="ja")
               th 発表順
               th タイトル
               th 発表者
-            tr
-              td 1
-              td けんきゅうはいいぞ
-              td izumin5210
-            tr
-              td 2
-              td 組織のトップの良い選び方、そして無能をトップにすることによるその効果。
-              td ノアン
-            tr
-              td 3
-              td 僕たちはなぜ「学ぶ」のだろうか？~高専出身教職勢による教育学入門~
-              td: a(href="https://twitter.com/ARGV_sat777" target="_blank") satuma
-            tr
-              td 4
-              td 2017年最新版！大学生の就活
-              td: a(href="https://twitter.com/marin72_com" target="_blank") なっちゃん
-            tr
-              td 5
-              td どっちつかずの中途半端が考える課外活動と本業の両立について
-              td どくぴー
+            +timetable("1", "けんきゅうはいいぞ", "izumin5210", "", { twitter: "https://twitter.com/izumin5210", web: "http://izumin.info" })
+            +timetable("2", "組織のトップの良い選び方、そして無能をトップにすることによるその効果。", "ノアン", "")
+            +timetable("3", "僕たちはなぜ「学ぶ」のだろうか？~高専出身教職勢による教育学入門~", "satuma", "", { twitter: "https://twitter.com/ARGV_sat777" })
+            +timetable("4", "2017年最新版！大学生の就活", "なっちゃん", "", { twitter: "https://twitter.com/marin72_com" })
+            +timetable("5", "どっちつかずの中途半端が考える課外活動と本業の両立について", "どくぴー", "")
 
           h3 Lightning Talk
           table.presentation-timetable
@@ -108,53 +94,18 @@ html(lang="ja")
               th タイトル
               th 発表者
             tr
-              td 1
-              td 地名のおはなし
-              td: a(href="https://twitter.com/64G806" target="_blank") うに
-            tr
-              td 2
-              td 知られざるロボコン交流会
-              td てんちょ
-            tr
-              td 3
-              td RPiオーディオシステムの自作
-              td もは
-            tr
-              td 4
-              td マルウェア解析してみた
-              td: a(href="https://syobon.jp" target="_blank") しょぼん
-            tr
-              td 5
-              td すぐにできるアプリ開発
-              td: a(href="https://twitter.com/nuratokura" target="_blank") ★RT☆
-            tr
-              td 6
-              td 都市科高専生がコンクリートについて語る
-              td: a(href="https://twitter.com/zakuro9715" target="_blank") zakuro
-            tr
-              td 7
-              td 世界は繋がっている
-              td: a(href="https://twitter.com/Iruyan_Zak" target="_blank") いるやん
-            tr
-              td 8
-              td ラブライブ！で学ぶドメイン駆動しない設計入門
-              td: a(href="https://twitter.com/MITLicense" target="_blank") じゅりあん
-            tr
-              td 9
-              td lolカンファを支える技術
-              td: a(href="https://twitter.com/yamasy1549" target="_blank") やましー
-            tr
-              td 10
-              td Python製Webフレームワークの設計と実装
-              td: a(href="https://twitter.com/c_bata_" target="_blank") カレーメシ
-            tr
-              td 11
-              td D-PRO135°活動紹介
-              td: a(href="https://twitter.com/135_d_pro" target="_blank") D-PRO135°
-            tr
-              td 12
-              td
-              td ジースタイラス
+              +timetable("1", "地名のおはなし", "うに", "", { twitter: "https://twitter.com/64G806" })
+              +timetable("2", "知られざるロボコン交流会", "てんちょ", "")
+              +timetable("3", "RPiオーディオシステムの自作", "もは", "")
+              +timetable("4", "マルウェア解析してみた", "しょぼん", "", { twitter: "https://syobon.jp" })
+              +timetable("5", "すぐにできるアプリ開発", "★RT☆", "", { twitter: "https://twitter.com/nuratokura" })
+              +timetable("6", "都市科高専生がコンクリートについて語る", "zakuro", "", { twitter: "https://twitter.com/zakuro9715" })
+              +timetable("7", "世界は繋がっている", "いるやん", "", { twitter: "https://twitter.com/Iruyan_Zak" })
+              +timetable("8", "ラブライブ！で学ぶドメイン駆動しない設計入門", "じゅりあん", "", { twitter: ["https://twitter.com/MITLicense", "https://twitter.com/GNUGPLv3"] })
+              +timetable("9", "lolカンファを支える技術", "やましー", "", { twitter: "https://twitter.com/yamasy1549", web: "http://yamasy.info" })
+              +timetable("10", "Python製Webフレームワークの設計と実装", "カレーメシ", "", { twitter: "https://twitter.com/c_bata_" })
+              +timetable("11", "D-PRO135°活動紹介", "D-PRO135°", "", { twitter: "https://twitter.com/135_d_pro" })
+              +timetable("12", "", "ジースタイラス", "", { web: "http://www.studenthunting.com" })
 
         h2.circle-pink#booth ブース発表
         section
@@ -173,107 +124,17 @@ html(lang="ja")
               th ブース番号
               th タイトル
               th 発表者
-            tr
-              td 1
-              td: a#link-p01(href="#modal-p01")  ｻﾊﾞﾉﾋｶﾘﾓﾉ
-              td: a(href="http://coils.work" target="_blank") Shuft鯖
-            tr
-              td 2
-              td カップル専用アプリ触れます
-              td: a(href="https://blog.unasuke.com" target="_blank") うなすけ
-            tr
-              td 3
-              td 
-              td: a(href="http://chatbox-inc.com/" target="_blank") chatbox
-            tr
-              td 4
-              td: a#link-p04(href="#modal-p04") FREE HUG
-              td いらいざ
-            tr
-              td 5
-              td: a#link-p05(href="#modal-p05") CTFコンテスト
-              td: a(href="https://akashisn.azurewebsites.net/" target="_blank") Akashi_SN
-            tr
-              td 6
-              td: a#link-p06(href="#modal-p06") サーマルプリンターであそぼ！！！！！
-              td: a(href="http://Nishimago.me" target="_blank") うに
-            tr
-              td 7
-              td 
-              td GitHub Japan
-            tr
-              td 8
-              td A Whole New Router World
-              td: a(href="http://zopfcode.hateblo.jp/" target="_blank") ルータ芸人（末田卓巳）
-            tr
-              td 9
-              td 素晴らしい僕のいるコミュニティたち
-              td: a(href="http://denari.link" target="_blank") denari01
-            tr
-              td 10
-              td: a#link-p10(href="#modal-p10") 防災ゲーム展示
-              td: a(href="https://www.facebook.com/d.pro135.e" target="_blank") D-PRO135°
-            tr
-              td 11
-              td: a#link-p11(href="#modal-p11") 経営情報学科に通った話
-              td Yuya Oka
-
-        section.modal-window#modal-p01
-          .modal-inner
-            p
-              | 鯖です。ﾋｶﾘﾓﾉを展示します。いままで鯖名義でやってきた工作物展示を行います。
-              br
-              | 主に、光る(ピックアップ)ギターを実際に展示してみてもらいつつ適度に自分の解説を入れる具合になると思います。
-              br
-              | ですが、これでは少ないと思うのと鯖はﾋｶﾘﾓﾉなので授業用に作ったNode.jsを用いたバーサライタプログラムジェネレータ(改)とArduinoを用いて、バーサライタの展示をできたらと思います。
-              br
-              | ジェネレータを用いることで簡単にプログラムが作れるので、バーサライタで文字や絵の表現ができるような体験展示を予定しています。
-          a.modal-close(href="#link-p01")
-        section.modal-window#modal-p04
-          .modal-inner
-            p FREE HUGやります、待ってます。
-          a.modal-close(href="#link-p04")
-        section.modal-window#modal-p05
-          .modal-inner
-            p
-              | CTFの紹介スライド発表します。
-              br
-              | 更に興味を持ってくれた方にパソコンが必要ない問題を渡します。
-          a.modal-close(href="#link-p05")
-        section.modal-window#modal-p06
-          .modal-inner
-            p
-              | サーマルプリンターを使ったアプリケーションの実演を行います。
-              br
-              | 普段はレシートの印刷などでよく目にすることが多いですが、シリアル通信を使うことで汎用的に使うこともできます。この発表では、アプリケーションの実演を行いつつ動作の解説を行っていきたいと思います。どんなアプリケーションを実演するかは当日のお楽しみに！！！
-              br
-              | ※あとはOPACも作る予定でしたが、タスクが多すぎたので諦めました。許してください。
-          a.modal-close(href="#link-p06")
-        section.modal-window#modal-p10
-          .modal-inner
-            p
-              | D-PRO135°（明石高専防災団）は、明石高専で防災士資格を取得した学生有志による、活動組織です。
-              br
-              | 組織発足からまだ9カ月ですが、様々な防災活動を行ってきました。
-              br
-              | その活動の1つが、防災ゲーム「SECOND HAZARD」の製作です。ゲームの製作はすべて自分たちの手で行いました。
-              br
-              | 「遊ぶだけで防災の知識が身につく」をコンセプトに何度も協議を重ね、ゲームの概要を決定。その後、阪神淡路大震災の被災者の方々から被災体験を伺い、ゲームに取り入れました。
-              br
-              | また、コマは3Dプリンタで製作するなど、高専らしさも盛り込んでいます。
-              br
-              | 「SECOND HAZARD」は、町の地図上で駒を進めるボードゲームになっています。
-              br
-              | プレイヤーはスタート地点から、途中で発生する災害を避けつつ、避難所を目指します。また、適する防災グッズを使うことで、災害を乗り超えることも可能です。
-              br
-              | まだまだ試作の段階ですが、協議や修正を重ね、多くの方々に遊んでもらえるゲームを完成させたいです。
-          a.modal-close(href="#link-p10")
-        section.modal-window#modal-p11
-          .modal-inner
-            ul
-              li 全国高専で唯一の宇部高専の経営情報学科に5年間通ったことで学んだこと。
-              li 経営科目について少しだけ触れて新たな分野に手を伸ばすことで自分の強みにすることができるということを伝えたい。
-          a.modal-close(href="#link-p11")
+            +timetable("1", "ｻﾊﾞﾉﾋｶﾘﾓﾉ", "Shuft鯖", "鯖です。ﾋｶﾘﾓﾉを展示します。いままで鯖名義でやってきた工作物展示を行います。 主に、光る(ピックアップ)ギターを実際に展示してみてもらいつつ適度に自分の解説を入れる具合になると思います。 ですが、これでは少ないと思うのと鯖はﾋｶﾘﾓﾉなので授業用に作ったNode.jsを用いたバーサライタプログラムジェネレータ(改)とArduinoを用いて、バーサライタの展示をできたらと思います。 ジェネレータを用いることで簡単にプログラムが作れるので、バーサライタで文字や絵の表現ができるような体験展示を予定しています。", { web: "http://coils.work" })
+            +timetable("2", "カップル専用アプリ触れます", "うなすけ", "", { web: "https://blog.unasuke.com" })
+            +timetable("3", "chatbox", "chatbox", "簡単な会社の教育制度やコミュニティの紹介等させてもらう予定です。", { web: "http://chatbox-inc.com" })
+            +timetable("4", "FREE HUG", "いらいざ", "FREE HUGやります、待ってます。")
+            +timetable("5", "CTFコンテスト", "Akashi_SN、Snow", "CTFの紹介スライド発表します。 更に興味を持ってくれた方にパソコンが必要ない問題を渡します。", { web: "https://akashisn.azurewebsites.net" })
+            +timetable("6", "サーマルプリンターであそぼ！！！！！", "うに", "サーマルプリンターを使ったアプリケーションの実演を行います。 普段はレシートの印刷などでよく目にすることが多いですが、シリアル通信を使うことで汎用的に使うこともできます。この発表では、アプリケーションの実演を行いつつ動作の解説を行っていきたいと思います。どんなアプリケーションを実演するかは当日のお楽しみに！！！ ※あとはOPACも作る予定でしたが、タスクが多すぎたので諦めました。許してください。", { web: "http://Nishimago.me" })
+            +timetable("7", "GitHub Japan", "GitHub Japan", "GitHubです。", { web: "http://github.co.jp" })
+            +timetable("8", "A Whole New Router World", "ルータ芸人（末田卓巳）", "", { web: "http://zopfcode.hateblo.jp" })
+            +timetable("9", "素晴らしい僕のいるコミュニティたち", "denari01", "", { web: "http://denari.link" })
+            +timetable("10", "防災ゲーム展示", "D-PRO135°", "D-PRO135°（明石高専防災団）は、明石高専で防災士資格を取得した学生有志による、活動組織です。 組織発足からまだ9カ月ですが、様々な防災活動を行ってきました。 その活動の1つが、防災ゲーム「SECOND HAZARD」の製作です。ゲームの製作はすべて自分たちの手で行いました。 「遊ぶだけで防災の知識が身につく」をコンセプトに何度も協議を重ね、ゲームの概要を決定。その後、阪神淡路大震災の被災者の方々から被災体験を伺い、ゲームに取り入れました。 また、コマは3Dプリンタで製作するなど、高専らしさも盛り込んでいます。 「SECOND HAZARD」は、町の地図上で駒を進めるボードゲームになっています。 プレイヤーはスタート地点から、途中で発生する災害を避けつつ、避難所を目指します。また、適する防災グッズを使うことで、災害を乗り超えることも可能です。 まだまだ試作の段階ですが、協議や修正を重ね、多くの方々に遊んでもらえるゲームを完成させたいです。", { web: "https://www.facebook.com/d.pro135.e" })
+            +timetable("11", "経営情報学科に通った話", "Yuya Oka", "全国高専で唯一の宇部高専の経営情報学科に5年間通ったことで学んだこと。 経営科目について少しだけ触れて新たな分野に手を伸ばすことで自分の強みにすることができるということを伝えたい。")
 
         h2.circle-pink#party 懇親会
         section

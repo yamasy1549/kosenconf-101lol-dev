@@ -13,6 +13,30 @@
     .booth-size { width: 100%; }
   }
 
+  .timetable-row {
+    .name {
+      .sns-icon {
+        text-decoration: none;
+
+        path { transition: $fade; }
+      }
+
+      .sns-icon.twitter {
+        &:hover path,
+        &:active path {
+          fill: $official-twitter;
+        }
+      }
+
+      .sns-icon.web {
+        &:hover path,
+        &:active path {
+          fill: $lol-green;
+        }
+      }
+    }
+  }
+
   .modal-window {
     transform: translate(0, 100%);
     position: fixed;
