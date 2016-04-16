@@ -53,8 +53,12 @@
     padding: 40px 60px;
     overflow-y: overlay;
     overflow-x: hidden;
+    line-height: 2;
 
-    ul { padding: 0; }
+    ul {
+      margin: 20px;
+      padding: 0;
+    }
 
     @media (max-width: 650px) {
       width: 90%;

@@ -1,11 +1,12 @@
-mixin timetable(order, title, name, accounts)
+mixin timetable(type, order, title, name, accounts)
   tr.timetable-row
     td #{order}
     if block
       td
-        a.btns(data-tgt="wd#{order}") #{title}
-        .modal(class="wd#{order}")
+        a.btns(data-tgt="wd-#{type}#{order}") #{title}
+        .modal(class="wd-#{type}#{order}")
           .modalBody
+            h4 概要
             block
           .modalBK
     else
