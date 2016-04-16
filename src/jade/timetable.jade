@@ -81,11 +81,11 @@ html(lang="ja")
               th 発表順
               th タイトル
               th 発表者
-            +timetable("1", "けんきゅうはいいぞ", "izumin5210", "", { twitter: "https://twitter.com/izumin5210", web: "http://izumin.info" })
-            +timetable("2", "組織のトップの良い選び方、そして無能をトップにすることによるその効果。", "ノアン", "")
-            +timetable("3", "僕たちはなぜ「学ぶ」のだろうか？~高専出身教職勢による教育学入門~", "satuma", "", { twitter: "https://twitter.com/ARGV_sat777" })
-            +timetable("4", "2017年最新版！大学生の就活", "なっちゃん", "", { twitter: "https://twitter.com/marin72_com" })
-            +timetable("5", "どっちつかずの中途半端が考える課外活動と本業の両立について", "どくぴー", "")
+            +timetable("1", "けんきゅうはいいぞ", "izumin5210", { twitter: "https://twitter.com/izumin5210", web: "http://izumin.info" })
+            +timetable("2", "組織のトップの良い選び方、そして無能をトップにすることによるその効果。", "ノアン")
+            +timetable("3", "僕たちはなぜ「学ぶ」のだろうか？~高専出身教職勢による教育学入門~", "satuma", { twitter: "https://twitter.com/ARGV_sat777" })
+            +timetable("4", "2017年最新版！大学生の就活", "なっちゃん", { twitter: "https://twitter.com/marin72_com" })
+            +timetable("5", "どっちつかずの中途半端が考える課外活動と本業の両立について", "どくぴー", { twitter: "https://twitter.com/e10dokup" })
 
           h3 Lightning Talk
           table.presentation-timetable
@@ -94,18 +94,18 @@ html(lang="ja")
               th タイトル
               th 発表者
             tr
-              +timetable("1", "地名のおはなし", "うに", "", { twitter: "https://twitter.com/64G806" })
-              +timetable("2", "知られざるロボコン交流会", "てんちょ", "")
-              +timetable("3", "RPiオーディオシステムの自作", "もは", "")
-              +timetable("4", "マルウェア解析してみた", "しょぼん", "", { twitter: "https://syobon.jp" })
-              +timetable("5", "すぐにできるアプリ開発", "★RT☆", "", { twitter: "https://twitter.com/nuratokura" })
-              +timetable("6", "都市科高専生がコンクリートについて語る", "zakuro", "", { twitter: "https://twitter.com/zakuro9715" })
-              +timetable("7", "世界は繋がっている", "いるやん", "", { twitter: "https://twitter.com/Iruyan_Zak" })
-              +timetable("8", "ラブライブ！で学ぶドメイン駆動しない設計入門", "じゅりあん", "", { twitter: ["https://twitter.com/MITLicense", "https://twitter.com/GNUGPLv3"] })
-              +timetable("9", "lolカンファを支える技術", "やましー", "", { twitter: "https://twitter.com/yamasy1549", web: "http://yamasy.info" })
-              +timetable("10", "Python製Webフレームワークの設計と実装", "カレーメシ", "", { twitter: "https://twitter.com/c_bata_" })
-              +timetable("11", "D-PRO135°活動紹介", "D-PRO135°", "", { twitter: "https://twitter.com/135_d_pro" })
-              +timetable("12", "", "ジースタイラス", "", { web: "http://www.studenthunting.com" })
+              +timetable("1", "地名のおはなし", "うに", { twitter: "https://twitter.com/64G806" })
+              +timetable("2", "知られざるロボコン交流会", "てんちょ")
+              +timetable("3", "RPiオーディオシステムの自作", "もは")
+              +timetable("4", "マルウェア解析してみた", "しょぼん", { twitter: "https://syobon.jp" })
+              +timetable("5", "すぐにできるアプリ開発", "★RT☆", { twitter: "https://twitter.com/nuratokura" })
+              +timetable("6", "都市科高専生がコンクリートについて語る", "zakuro", { twitter: "https://twitter.com/zakuro9715" })
+              +timetable("7", "世界は繋がっている", "いるやん", { twitter: "https://twitter.com/Iruyan_Zak" })
+              +timetable("8", "ラブライブ！で学ぶドメイン駆動しない設計入門", "じゅりあん", { twitter: ["https://twitter.com/MITLicense", "https://twitter.com/GNUGPLv3"] })
+              +timetable("9", "lolカンファを支える技術", "やましー", { twitter: "https://twitter.com/yamasy1549", web: "http://yamasy.info" })
+              +timetable("10", "Python製Webフレームワークの設計と実装", "カレーメシ", { twitter: "https://twitter.com/c_bata_" })
+              +timetable("11", "D-PRO135°活動紹介", "D-PRO135°", { twitter: "https://twitter.com/135_d_pro" })
+              +timetable("12", "", "ジースタイラス", { web: "http://www.studenthunting.com" })
 
         h2.circle-pink#booth ブース発表
         section
@@ -124,17 +124,69 @@ html(lang="ja")
               th ブース番号
               th タイトル
               th 発表者
-            +timetable("1", "ｻﾊﾞﾉﾋｶﾘﾓﾉ", "Shuft鯖", "鯖です。ﾋｶﾘﾓﾉを展示します。いままで鯖名義でやってきた工作物展示を行います。 主に、光る(ピックアップ)ギターを実際に展示してみてもらいつつ適度に自分の解説を入れる具合になると思います。 ですが、これでは少ないと思うのと鯖はﾋｶﾘﾓﾉなので授業用に作ったNode.jsを用いたバーサライタプログラムジェネレータ(改)とArduinoを用いて、バーサライタの展示をできたらと思います。 ジェネレータを用いることで簡単にプログラムが作れるので、バーサライタで文字や絵の表現ができるような体験展示を予定しています。", { web: "http://coils.work" })
-            +timetable("2", "カップル専用アプリ触れます", "うなすけ", "", { web: "https://blog.unasuke.com" })
-            +timetable("3", "chatbox", "chatbox", "簡単な会社の教育制度やコミュニティの紹介等させてもらう予定です。", { web: "http://chatbox-inc.com" })
-            +timetable("4", "FREE HUG", "いらいざ", "FREE HUGやります、待ってます。")
-            +timetable("5", "CTFコンテスト", "Akashi_SN、Snow", "CTFの紹介スライド発表します。 更に興味を持ってくれた方にパソコンが必要ない問題を渡します。", { web: "https://akashisn.azurewebsites.net" })
-            +timetable("6", "サーマルプリンターであそぼ！！！！！", "うに", "サーマルプリンターを使ったアプリケーションの実演を行います。 普段はレシートの印刷などでよく目にすることが多いですが、シリアル通信を使うことで汎用的に使うこともできます。この発表では、アプリケーションの実演を行いつつ動作の解説を行っていきたいと思います。どんなアプリケーションを実演するかは当日のお楽しみに！！！ ※あとはOPACも作る予定でしたが、タスクが多すぎたので諦めました。許してください。", { web: "http://Nishimago.me" })
-            +timetable("7", "GitHub Japan", "GitHub Japan", "GitHubです。", { web: "http://github.co.jp" })
-            +timetable("8", "A Whole New Router World", "ルータ芸人（末田卓巳）", "", { web: "http://zopfcode.hateblo.jp" })
-            +timetable("9", "素晴らしい僕のいるコミュニティたち", "denari01", "", { web: "http://denari.link" })
-            +timetable("10", "防災ゲーム展示", "D-PRO135°", "D-PRO135°（明石高専防災団）は、明石高専で防災士資格を取得した学生有志による、活動組織です。 組織発足からまだ9カ月ですが、様々な防災活動を行ってきました。 その活動の1つが、防災ゲーム「SECOND HAZARD」の製作です。ゲームの製作はすべて自分たちの手で行いました。 「遊ぶだけで防災の知識が身につく」をコンセプトに何度も協議を重ね、ゲームの概要を決定。その後、阪神淡路大震災の被災者の方々から被災体験を伺い、ゲームに取り入れました。 また、コマは3Dプリンタで製作するなど、高専らしさも盛り込んでいます。 「SECOND HAZARD」は、町の地図上で駒を進めるボードゲームになっています。 プレイヤーはスタート地点から、途中で発生する災害を避けつつ、避難所を目指します。また、適する防災グッズを使うことで、災害を乗り超えることも可能です。 まだまだ試作の段階ですが、協議や修正を重ね、多くの方々に遊んでもらえるゲームを完成させたいです。", { web: "https://www.facebook.com/d.pro135.e" })
-            +timetable("11", "経営情報学科に通った話", "Yuya Oka", "全国高専で唯一の宇部高専の経営情報学科に5年間通ったことで学んだこと。 経営科目について少しだけ触れて新たな分野に手を伸ばすことで自分の強みにすることができるということを伝えたい。")
+            +timetable("1", "ｻﾊﾞﾉﾋｶﾘﾓﾉ", "Shuft鯖", { web: "http://coils.work" })
+              | 鯖です。ﾋｶﾘﾓﾉを展示します。いままで鯖名義でやってきた工作物展示を行います。
+              br
+              | 主に、光る(ピックアップ)ギターを実際に展示してみてもらいつつ適度に自分の解説を入れる具合になると思います。
+              br
+              | ですが、これでは少ないと思うのと鯖はﾋｶﾘﾓﾉなので授業用に作ったNode.jsを用いたバーサライタプログラムジェネレータ(改)とArduinoを用いて、バーサライタの展示をできたらと思います。
+              br
+              | ジェネレータを用いることで簡単にプログラムが作れるので、バーサライタで文字や絵の表現ができるような体験展示を予定しています。
+            +timetable("2", "カップル専用アプリ触れます", "うなすけ", { web: "https://blog.unasuke.com" })
+              | カップル専用アプリの触れるスマホを1組用意します。
+              br
+              | どなたでもでも自由に触れるようにしてカップル専用アプリの使いごこちを感じてもらいます。
+            +timetable("3", "chatbox", "chatbox", { web: "http://chatbox-inc.com" })
+              | 簡単な会社の教育制度やコミュニティの紹介等させてもらう予定です。
+            +timetable("4", "FREE HUG", "いらいざ")
+              | FREE HUGやります、待ってます。
+            +timetable("5", "CTFコンテスト", "Akashi_SN、Snow", { web: "https://akashisn.azurewebsites.net" })
+              | CTFの紹介スライド発表します。
+              br
+              | 更に興味を持ってくれた方にパソコンが必要ない問題を渡します。
+            +timetable("6", "サーマルプリンターであそぼ！！！！！", "うに", { web: "http://Nishimago.me" })
+              | サーマルプリンターを使ったアプリケーションの実演を行います。
+              br
+              | 普段はレシートの印刷などでよく目にすることが多いですが、シリアル通信を使うことで汎用的に使うこともできます。この発表では、アプリケーションの実演を行いつつ動作の解説を行っていきたいと思います。どんなアプリケーションを実演するかは当日のお楽しみに！！！
+              br
+              | ※あとはOPACも作る予定でしたが、タスクが多すぎたので諦めました。許してください。
+            +timetable("7", "GitHub Japan", "GitHub Japan", { web: "http://github.co.jp" })
+              | GitHubです。
+            +timetable("8", "A Whole New Router World", "ルータ芸人（@puhitaku/末田卓巳）", { web: "http://zopfcode.hateblo.jp" })
+              | 「いつでも探してしまう、どっかに君（CPU）の姿を…向かいのルータ、Kindleの中、こんなとこにいるはずもないのに（実際いる）」
+              br
+              | ワンコインでWi-Fiチップが手に入る今日、ものづくりの欲求は急速に満たされつつあります。
+              br
+              | 入門しづらいとされたハードウェアの領域すらも、今や簡単に触れる土台が整っています。
+              br
+              | しかし同時に、中身を理解せずとも使える機器 ― いわゆるブラックボックス ― が身近に増え、高度な機器であることすら意識せず使うことが多くなりました。
+              br
+              | ここで1つだけ知っていただきたいことがあります。
+              br
+              | それらブラックボックスの中身が何でできているかを知り、そしてそれを意のままに操れるとわかった時、あなたにとっての「ものづくり」と「ハードウェア」は確実に変化を遂げることでしょう。
+              br
+              | その一片を、このブースで体験してもらえると幸いです。
+            +timetable("9", "素晴らしい僕のいるコミュニティたち", "denari01", { web: "http://denari.link" })
+            +timetable("10", "防災ゲーム展示", "D-PRO135°", { web: "https://www.facebook.com/d.pro135.e" })
+              | D-PRO135°（明石高専防災団）は、明石高専で防災士資格を取得した学生有志による、活動組織です。
+              br
+              | 組織発足からまだ9カ月ですが、様々な防災活動を行ってきました。
+              br
+              | その活動の1つが、防災ゲーム「SECOND HAZARD」の製作です。ゲームの製作はすべて自分たちの手で行いました。
+              br
+              | 「遊ぶだけで防災の知識が身につく」をコンセプトに何度も協議を重ね、ゲームの概要を決定。その後、阪神淡路大震災の被災者の方々から被災体験を伺い、ゲームに取り入れました。
+              br
+              | また、コマは3Dプリンタで製作するなど、高専らしさも盛り込んでいます。
+              br
+              | 「SECOND HAZARD」は、町の地図上で駒を進めるボードゲームになっています。
+              br
+              | プレイヤーはスタート地点から、途中で発生する災害を避けつつ、避難所を目指します。また、適する防災グッズを使うことで、災害を乗り超えることも可能です。
+              br
+              | まだまだ試作の段階ですが、協議や修正を重ね、多くの方々に遊んでもらえるゲームを完成させたいです。
+            +timetable("11", "経営情報学科に通った話", "Yuya Oka")
+              ul
+                li 全国高専で唯一の宇部高専の経営情報学科に5年間通ったことで学んだこと。
+                li 経営科目について少しだけ触れて新たな分野に手を伸ばすことで自分の強みにすることができるということを伝えたい。
 
         h2.circle-pink#party 懇親会
         section
@@ -151,3 +203,4 @@ html(lang="ja")
     include ./_footer
     include ./_scripts
     +scripts("timetable")
+    script(src="./scripts/modal.js")

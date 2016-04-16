@@ -1,13 +1,13 @@
-mixin timetable(order, title, name, description, accounts)
+mixin timetable(order, title, name, accounts)
   tr.timetable-row
     td #{order}
-    if description
+    if block
       td
-        a(id="link-p#{order}" href="#modal-p#{order}") #{title}
-        section.modal-window(id="modal-p#{order}")
-          .modal-inner
-            p #{description}
-          a.modal-close(href="#link-p#{order}")
+        a.btns(data-tgt="wd#{order}") #{title}
+        .modal(class="wd#{order}")
+          .modalBody
+            block
+          .modalBK
     else
       td #{title}
     td.name
