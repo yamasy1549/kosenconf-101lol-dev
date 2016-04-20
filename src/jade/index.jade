@@ -109,9 +109,19 @@ html(lang="ja")
         h2.circle-green スポンサー一覧
         ul.sponsor-lists
           +sponsor("株式会社chatbox", "chatbox.png", "http://chatbox-inc.com/")
-          +sponsor("ACT135", "act135.png", "http://gijutsusha-syuudan.org/")
-          +sponsor("spice life", "spicelife.png", "http://spicelife.jp/")
+          +sponsor("GitHub", "github.png", "http://github.com/")
+          li.sponsor
+            .icon
+              img(src="./images/sponsors/spicelife.png" alt="spicelife" usemap="#spicelife")
+              map(name="spicelife")
+                area(shape="rect" coords="0,0,200%,60%" href="http://spicelife.jp/" target="_blank" alt="spice life")
+                area(shape="rect" coords="0,60%,200%,80%" href="https://steers.jp/" target="_blank" alt="STEERS")
+                area(shape="rect" coords="0,80%,200%,100%" href="https://tmix.jp/" target="_blank" alt="TMIX")
+            .name
+              a(href="http://spicelife.jp/" target="_blank") spice life さま
+        ul.sponsor-lists
           +sponsor("大阪C++読書会", "cpp_osaka.png", "http://cpp-osaka.connpass.com/")
+          +sponsor("ACT135", "act135.png", "http://gijutsusha-syuudan.org/")
 
       section.section#faq
         h2.circle-orange FAQ
