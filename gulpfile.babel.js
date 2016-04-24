@@ -4,6 +4,7 @@ import gulp         from "gulp";
 import loadPlugins  from "gulp-load-plugins";
 
 import jade         from "gulp-jade";
+import coffee       from "gulp-coffee";
 import sass         from "gulp-sass";
 import sassGlob     from "gulp-sass-glob";
 import autoprefixer from "gulp-autoprefixer";
@@ -12,6 +13,8 @@ import imagemin     from "gulp-imagemin";
 import pngquant     from "imagemin-pngquant";
 import uglify       from "gulp-uglify";
 import browserSync  from "browser-sync";
+import yamlData     from "vinyl-yaml-data";
+import deepExtend   from "deep-extend-stream";
 import path         from "path";
 
 import plumber      from "gulp-plumber";
@@ -23,12 +26,16 @@ const SRC_DIR     = path.join(__dirname, "./src");
 const DEST_DIR    = path.join(__dirname, "./dest");
 
 const JADE_DIR    = path.join(SRC_DIR, "jade");
+const YAML_DIR    = path.join(SRC_DIR, "data");
 const SCSS_DIR    = path.join(SRC_DIR, "scss");
 const IMAGES_DIR  = path.join(SRC_DIR, "images");
 const SCRIPTS_DIR = path.join(SRC_DIR, "scripts");
 
+var locals = {};
+
 const JADE_OPTIONS = {
-    pretty: true
+    pretty: true,
+    locals: locals
 };
 
 const SASS_OPTIONS = {
@@ -50,11 +57,17 @@ const BROWSER_SYNC_OPTIONS = {
     open: false
 };
 
-gulp.task("jade", () => {
-    return gulp.src(path.join(JADE_DIR, "**/*.jade"))
+gulp.task("jade", ["yaml"], () => {
+    return gulp.src([path.join(JADE_DIR, "**/*.jade"), "!" + path.join(JADE_DIR, "**/_*.jade")])
         .pipe(plumber())
         .pipe(jade(JADE_OPTIONS))
         .pipe(gulp.dest(DEST_DIR));
+});
+
+gulp.task("yaml", () => {
+    return gulp.src(path.join(YAML_DIR, "**/*.y{,a}ml"))
+        .pipe(yamlData())
+        .pipe(deepExtend(locals));
 });
 
 gulp.task("scss", () => {
@@ -89,7 +102,7 @@ gulp.task("jsmin", () => {
 gulp.task("watch", () => {
     browserSync(BROWSER_SYNC_OPTIONS);
 
-    gulp.watch([path.join(JADE_DIR, "**/*.jade")], ["jade", reload]);
+    gulp.watch([path.join(JADE_DIR, "**/*.jade"), path.join(YAML_DIR, "**/*.y{,a}ml")], ["jade", reload]);
     gulp.watch([path.join(SCSS_DIR, "**/*.{scss,css}")], ["scss", reload]);
     gulp.watch([path.join(SCRIPTS_DIR, "**/*.{jpg,jpeg,png,gif,svg}")], ["imagemin", reload]);
     gulp.watch([path.join(SCRIPTS_DIR, "**/*.js")], ["jsmin", reload]);
