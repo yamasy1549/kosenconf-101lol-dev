@@ -1,7 +1,9 @@
+doctype html
 include ./_head
 include ./_global-nav
+include ./_footer
+include ./_scripts
 
-doctype html
 html(lang="ja")
   head
     +head("募集情報", "article", "「プレゼン発表」では、一般発表とLightning Talkの2種類の発表形式で募集を行います。「ブース発表」では基本的にどのようなことをしていただくのも自由です。また、ブース発表会場でのポスターの掲示の依頼も受け付けております。")
@@ -234,6 +236,5 @@ html(lang="ja")
             br
             | （[at]を@に変えてご送信ください）
 
-    include ./_footer
-    include ./_scripts
-    +scripts("application")
+    +footer()
+    +scripts(["application"], "")

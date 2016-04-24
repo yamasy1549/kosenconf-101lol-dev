@@ -1,8 +1,10 @@
+doctype html
 include ./_head
 include ./_global-nav
 include ./_member
+include ./_footer
+include ./_scripts
 
-doctype html
 html(lang="ja")
   head
     +head("アクセス", "article", "会場へのアクセスはこちらから。会場の明石高専までは、鉄道もしくは飛行機をご利用ください。")
@@ -116,8 +118,5 @@ html(lang="ja")
             +member("zoom4638", "zoom4638.jpg", "懇親会", "おんなのこになりたい")
             +member("sinatikkkkku", "sinatikkkkku.jpg", "受付", "手書きレポートは楽しいめう(錯乱)")
 
-
-    include ./_footer
-    include ./_scripts
-    +scripts("access")
-    script(src="./scripts/twitter.js")
+    +footer()
+    +scripts(["access"], ["twitter"])

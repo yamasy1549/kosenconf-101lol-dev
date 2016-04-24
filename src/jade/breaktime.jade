@@ -1,7 +1,9 @@
+doctype html
 include ./_head
 include ./_global-nav
+include ./_footer
+include ./_scripts
 
-doctype html
 html(lang="ja")
   head
     +head("", "")
@@ -16,6 +18,4 @@ html(lang="ja")
           #lol-circle-orange
           #lol-circle-pink
           img#lol-logo(src="./images/toplogo.png" alt="高専カンファレンスlol ロゴ")
-    include ./_scripts
-    +scripts("index")
-
+    +scripts(["index"], "")
