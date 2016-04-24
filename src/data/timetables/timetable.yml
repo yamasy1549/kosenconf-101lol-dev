@@ -1,0 +1,55 @@
+-
+  time: 12:00〜13:00
+  name: 受付
+  at: 階段教室
+  link: 
+-
+  time: 13:00〜13:10
+  name: オープニング
+  at: 階段教室
+  link: 
+-
+  time: 13:10〜15:55
+  name: プレゼン発表（一般・LT）
+  at: 階段教室
+  link: '#presentation'
+-
+  time: 15:55〜16:00
+  name: ブース発表の諸注意
+  at: 階段教室
+  link: 
+-
+  time: 16:00〜16:20
+  name: 移動・休憩
+  at: 
+  link: 
+-
+  time: 16:20〜16:50
+  name: ブース発表
+  at: 合併教室
+  link: '#booth'
+-
+  time: 16:50〜17:00
+  name: 移動・休憩
+  at: 
+  link: 
+-
+  time: 17:00〜17:10
+  name: 宣伝・告知
+  at: 階段教室
+  link: 
+-
+  time: 17:10〜17:20
+  name: クロージング・写真撮影
+  at: 階段教室
+  link: 
+-
+  time: 17:20〜17:30
+  name: 移動
+  at: 
+  link: 
+-
+  time: 17:30〜19:00
+  name: 懇親会
+  at: 食堂
+  link: '#party'
