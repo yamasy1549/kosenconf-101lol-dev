@@ -64,6 +64,7 @@
     left: 62%;
   }
 
+  /* mixin化したほうがいい */
   .lead {
     text-align: center;
     line-height: 2.5;
@@ -86,6 +87,7 @@
   }
 }
 
+/* mixin化したほうがいい */
 #sponsor-lists {
   .sponsor-lists {
     list-style: none;

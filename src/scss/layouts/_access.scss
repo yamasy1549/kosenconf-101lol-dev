@@ -1,13 +1,17 @@
 #access {
   img {
+    /* でっかすぎるとわかりにくいので幅を狭めた。50%は適当 */
     width: 50%;
     margin: 10px 0;
   }
 
+  /* 道のりとの隙間が気になったので。 */
+  /* そもそもaddressをpの中に入れたほうがいい気もする */
   address { margin-bottom: 10px; }
 
   .googlemap {
     display: block;
+    /* マジックナンバー的になってる60pxとかは変数にしたほうが良さそう */
     margin: 10px 0 10px 60px;
     padding: 0;
 
@@ -30,12 +34,14 @@
   }
 }
 
+/* 路線記号 */
 #jrkobe-linemark {
   color: $white;
   background-color: #0277C4;
   padding: 0 4px 0 5px;
 }
 
+/* これはcomponentsに持って行くべき */
 #contact {
   .members {
     display: table;
