@@ -53,11 +53,8 @@ $(document).ready(function() {
         return false;
     });
     $(".backtotop #notice").click(function () {
-        if(location.href == "http://kosenconf.me/timetable.html") {
-            target = $("#presentation");
-            $("body, html").animate({scrollTop: target.offset().top}, 500);
-        } else {
-            location.href = "http://kosenconf.me/timetable.html#presentation";
+        if(location.href != "http://kosenconf.me/broadcast.html") {
+            location.href = "http://kosenconf.me/broadcast.html";
         }
         return false;
     });

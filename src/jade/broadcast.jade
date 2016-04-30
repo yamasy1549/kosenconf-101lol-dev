@@ -1,0 +1,27 @@
+doctype html
+include ./_head
+include ./_global-nav
+include ./_footer
+include ./_scripts
+
+html(lang="ja")
+  head
+    +head("配信情報", "article", "高専カンファレンスlolでは会場の様子をUstreamで配信しています。こちらからご覧ください。")
+
+  body
+    +global-nav()
+
+    div.wrapper
+      section.section#broadcast
+        h1 BROADCAST
+
+        h2.circle-orange Ustream
+        section
+          p Coming soon!
+          p
+            | 高専カンファレンスlolのUstream配信は、4/30（土）13:00からを予定しております。
+            br
+            | 今しばらくお待ちください。
+
+    +footer()
+    +scripts(["index"])
